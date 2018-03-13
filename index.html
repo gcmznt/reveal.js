@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Super smooth CSS animations</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/smooth.css">
@@ -36,12 +36,13 @@
 			<section data-state="has-scene has-scene--slow">
 				<h1>Reality</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)">
+			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
 				<h1>Battery drain</h1>
 				<div class="battery"></div>
 			</section>
-			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)">
+			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
 				<h1>Device overheating</h1>
+				<!-- thermometer -->
 			</section>
 			<section data-background-image="/img/maillard.jpg">
 				<h1 class="shadow">Maillard</h1>
@@ -51,49 +52,94 @@
 				<h2 class="shadow">Giacomo Zinetti</h2>
 				<h3 class="shadow">@gcmznt</h3>
 			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)">
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<h1>How browser renders?</h1>
 			</section>
-
-
-
-
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)">
+<!-- render cycle -->
+<!-- reflow -->
+<!-- repaint -->
+<!-- compose -->
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1 class="big">CSS</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)">
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1 class="small">Animate compositor-only properties</h1>
 			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="square slow"></div>
+				<div class="square fast"></div>
+				<button class="button" id="work">Execute long JS task</button>
+				<button class="button" id="start">Start heavy JS loop</button>
+				<button class="button" id="stop">Stop heavy JS loop</button>
+				<script>
+					const workButton = document.getElementById('work');
+					const startButton = document.getElementById('start');
+					const stopButton = document.getElementById('stop');
+					let heavyLoopTimeout;
 
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)">
+					function longTask(el = 10000000) {
+						console.log(el);
+						new Array(el).fill(1).map((e, i) => e * i);
+					}
+
+					function heavyLoop() {
+						startButton.style.display = 'none';
+						stopButton.style.display = '';
+						longTask(1000000);
+						heavyLoopTimeout = setTimeout(heavyLoop, 16);
+					}
+
+					function heavyLoopStop() {
+						startButton.style.display = '';
+						stopButton.style.display = 'none';
+						clearTimeout(heavyLoopTimeout)
+					}
+
+					workButton.addEventListener('click', () => longTask());
+					startButton.addEventListener('click', heavyLoop);
+					stopButton.addEventListener('click', heavyLoopStop);
+
+					stopButton.style.display = 'none';
+				</script>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1>Create layers</h1>
 				<h1><code>will-change</code></h1>
 			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)">
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1>Disable hover on scroll</h1>
+				<aside class="notes">
+					Scroll is an animation
+				</aside>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1 class="big">JS</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Avoid forced synchronous layout</h1>
 			</section>
-
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<h3 style="text-align: left"><code>
+elements.forEach(el => {<br>
+&nbsp;&nbsp;el.style.width<br>
+&nbsp;&nbsp;&nbsp;&nbsp;= `${el.offsetWidth}px`<br>
+})
+				</code></h3>
+			</section>
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1 class="big">rAF</h1>
 				<h2>requestAnimationFrame()</h2>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1 class="big">rIC</h1>
 				<h2>requestIdleCallback()</h2>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Batch big tasks</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)">
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Web workers</h1>
 			</section>
-
 			<section data-background-image="/img/rail.jpg">
 				<h1 class="shadow fragment">TARGET<br><big>RAIL</big></h1>
 			</section>
@@ -105,60 +151,122 @@ Idle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;50ms<br>
 Load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;1000ms<br>
 				</code></h2>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)">
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1 class="big">FLIP</h1>
 				<h3>by @aerotwist</h3>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)">
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>First</h1>
 				<h4 style="text-align: left"><code>
-					const first =<br>
-					&nbsp;&nbsp;el.getBoundingClientRect();
+const first =<br>
+&nbsp;&nbsp;el.getBoundingClientRect();
 				</code></h4>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)">
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Last</h1>
 				<h4 style="text-align: left"><code>
-					el.classList.toggle('end');<br>
-					const last =<br>
-					&nbsp;&nbsp;el.getBoundingClientRect();
+el.classList.toggle('end');<br>
+const last =<br>
+&nbsp;&nbsp;el.getBoundingClientRect();
 				</code></h4>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)">
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Invert</h1>
 				<h4 style="text-align: left"><code>
-					const invert =<br>
-					&nbsp;&nbsp;first.height / last.height;
+const invert =<br>
+&nbsp;&nbsp;first.height / last.height;
 				</code></h4>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)">
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Play</h1>
 				<h4 style="text-align: left"><code>
-					el.animate([<br>
-					&nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
-					&nbsp;&nbsp;{ transform: 'scale(0)' }<br>
-					], 300);
+el.animate([<br>
+&nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
+&nbsp;&nbsp;{ transform: 'scale(0)' }<br>
+], 300);
 				</code></h4>
 			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="flip-wrapper">
+					<div class="flip-demo">
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+						<div><div class="flip-el"></div></div>
+					</div>
+				</div>
+				<script>
+					Array.from(document.querySelectorAll('.flip-el')).forEach(el => {
+						el.addEventListener('click', e => flip(e.target))
+					});
 
-			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)">
+					function flip(el) {
+						var first = el.getBoundingClientRect();
+
+						el.classList.toggle('end');
+						var last = el.getBoundingClientRect();
+
+						var invertY = first.top - last.top;
+						var invertX = first.left - last.left;
+						var scaleX = first.width / last.width;
+						var scaleY = first.height / last.height;
+
+						requestAnimationFrame(function() {
+							el.animate([
+								{ transform: `translate(${invertX}px, ${invertY}px) scale(${scaleX}, ${scaleY})` },
+								{ transform: `translate(0, 0) scale(1, 1)` }
+							], 300);
+						});
+					};
+				</script>
+			</section>
+			<aside class="notes">
+				Animate not transitionable properties
+			</aside>
+<!-- update codepen -->
+			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)" data-background-color="#1C4587">
 				<h1>
 					Content<br>
 					VS<br>
 					Animations
 				</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)">
+			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)" data-background-color="#1C4587">
 				<h1 class="big">Users!</h1>
 			</section>
-
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)">
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<h1 class="small">The best animation is the invisible one</h1>
+				<aside class="notes">
+					Animations like referees
+				</aside>
 			</section>
-
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<h1>Links</h1>
+				<ul>
+					<li><a href="https://codepen.io/gcmznt/pen/xYXgzQ">Left vs transform animation: https://codepen.io/gcmznt/pen/xYXgzQ</a></li>
+					<li><a href="https://codepen.io/gcmznt/pen/zrJqZR">FLIP example: https://codepen.io/gcmznt/pen/zrJqZR</a></li>
+					<!-- Links -->
+				</ul>
+			</section>
 		</div>
 		<div class="scene">
 			<div class="sky"></div>
+<!-- clouds -->
 			<div class="sun"></div>
 			<div class="moon"></div>
 			<div class="dolphin">
@@ -171,11 +279,7 @@ Load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;1000ms<br>
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
-
 	<script>
-		// More info about config & dependencies:
-		// - https://github.com/hakimel/reveal.js#configuration
-		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
 			history: true,
 			dependencies: [
@@ -187,5 +291,4 @@ Load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;1000ms<br>
 		});
 	</script>
 </body>
-
 </html>

@@ -1,0 +1,41 @@
+.reveal .square {
+  --size: 150px;
+  --margin: 40px;
+
+  height: var(--size);
+  width: var(--size);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  position: relative;
+  margin: var(--margin);
+  border-radius: 50%;
+  left: 0;
+  animation: 5s linear infinite alternate;
+  
+  &.slow {
+    animation-name: slow;
+  }
+  
+  &.fast {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    animation-name: fast;
+  }
+}
+
+.button {
+  background: transparent;
+  color: currentColor;
+  border: 3px solid currentColor;
+  border-radius: 100px;
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 0.7em;
+  font-family: inherit;
+}
+
+@keyframes slow {
+  to { left: calc(100% - var(--size) - var(--margin) * 2) }
+}
+
+@keyframes fast {
+  to { transform: translateX(calc(960px - var(--size) - var(--margin) * 2)) }
+}

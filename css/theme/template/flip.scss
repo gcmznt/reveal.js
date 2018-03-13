@@ -1,0 +1,39 @@
+.flip-wrapper {
+  overflow: auto;
+  max-height: 700px;
+  position: relative;
+}
+
+.flip-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  overflow: auto;
+  grid-gap: 20px;
+}
+
+.flip-el {
+  background-color: var(--bg, #fff);
+  transform-origin: left top;
+  width: 100%;
+  height: 100%;
+  transition: opacity ease 300ms;
+}
+
+.flip-el.end {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.75;
+}
+
+.flip-demo > div:nth-child(8n + 0) { --bg: #F44336 }
+.flip-demo > div:nth-child(8n + 1) { --bg: #2196F3 }
+.flip-demo > div:nth-child(8n + 2) { --bg: #8BC34A }
+.flip-demo > div:nth-child(8n + 3) { --bg: #9C27B0 }
+.flip-demo > div:nth-child(8n + 4) { --bg: #607D8B }
+.flip-demo > div:nth-child(8n + 5) { --bg: #FFEB3B }
+.flip-demo > div:nth-child(8n + 6) { --bg: #3F51B5 }
+.flip-demo > div:nth-child(8n + 7) { --bg: #795548 }
