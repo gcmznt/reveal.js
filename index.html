@@ -148,8 +148,8 @@
 					}
 
 					workButton.addEventListener('click', () => longTask());
-					startButton.addEventListener('click', heavyLoop);
-					stopButton.addEventListener('click', heavyLoopStop);
+					startButton.addEventListener('click', () => heavyLoop());
+					stopButton.addEventListener('click', () => heavyLoopStop());
 
 					stopButton.style.display = 'none';
 				</script>
@@ -190,14 +190,21 @@ elements.forEach(el => {<br>
 				<h1 class="big">rIC</h1>
 				<h2>requestIdleCallback()</h2>
 			</section>
+			<aside class="notes">
+				Optimistic ui
+			</aside>
 			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Batch big tasks</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Web workers</h1>
 			</section>
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
+				<h1>Passive listener on scroll</h1>
+			</section>
 			<section data-background-image="/img/rail.jpg">
-				<h1 class="shadow fragment">TARGET
+				<h1 class="shadow fragment">
+					TARGET
 					<br>
 					<big>RAIL</big>
 				</h1>
@@ -259,73 +266,80 @@ el.animate([<br>
 				<div class="flip-wrapper">
 					<div class="flip-demo">
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 						<div>
-							<div class="flip-el"></div>
+							<div class="flip-el" tabindex="0"></div>
+						</div>
+						<div>
+							<div class="flip-el" tabindex="0"></div>
+						</div>
+						<div>
+							<div class="flip-el" tabindex="0"></div>
 						</div>
 					</div>
 				</div>
 				<script>
 					Array.from(document.querySelectorAll('.flip-el')).forEach(el => {
-						el.addEventListener('click', e => flip(e.target))
+						el.addEventListener('focus', e => flip(e.target, 'flipped'))
+						el.addEventListener('blur', e => flip(e.target, 'flipped'))
 					});
 
-					function flip(el) {
+					function flip(el, className = 'flipped') {
 						var first = el.getBoundingClientRect();
 
-						el.classList.toggle('end');
+						el.classList.toggle(className);
 						var last = el.getBoundingClientRect();
 
 						var invertY = first.top - last.top;
@@ -366,12 +380,17 @@ el.animate([<br>
 				<h1>Links</h1>
 				<ul>
 					<li>
-						<a href="https://codepen.io/gcmznt/pen/xYXgzQ">Left vs transform animation: https://codepen.io/gcmznt/pen/xYXgzQ</a>
+						<a href="https://developers.google.com/web/fundamentals/performance">Web Fundamentals: Performance</a>
 					</li>
 					<li>
-						<a href="https://codepen.io/gcmznt/pen/zrJqZR">FLIP example: https://codepen.io/gcmznt/pen/zrJqZR</a>
+						<a href="https://csstriggers.com/">CSS Triggers</a>
 					</li>
-					<!-- Links -->
+					<li>
+						<a href="https://aerotwist.com/blog/flip-your-animations/">FLIP by @aerotwist</a>
+					</li>
+					<li>
+						<a href="https://codepen.io/collection/DxqVxK/">Examples</a>
+					</li>
 				</ul>
 			</section>
 		</div>
