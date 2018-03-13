@@ -42,11 +42,10 @@
 			</section>
 			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
 				<h1>Device overheating</h1>
-				<!-- thermometer -->
+				<div class="thermometer"></div>
 			</section>
 			<section data-background-image="/img/maillard.jpg">
 				<h1 class="shadow">Maillard</h1>
-				<h1 class="shadow">140°</h1>
 			</section>
 			<section data-background-image="/img/me.jpg" style="text-align: right; padding-top: 200px">
 				<h2 class="shadow">Giacomo Zinetti</h2>
@@ -55,10 +54,63 @@
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<h1>How browser renders?</h1>
 			</section>
-<!-- render cycle -->
-<!-- reflow -->
-<!-- repaint -->
-<!-- compose -->
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="cycle">
+					<div class="main">
+						<h1 class="small">Render cycle</h1>
+					</div>
+					<h3 class="chevron js">JavaScript</h3>
+					<h3 class="chevron style">Style</h3>
+					<h3 class="chevron layout">Layout</h3>
+					<h3 class="chevron paint">Paint</h3>
+					<h3 class="chevron composite">Composite</h3>
+				</div>
+			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="cycle">
+					<div class="main">
+						<h1 class="small">Reflow</h1>
+						<h2>
+							<code>margin<br>padding</code>
+						</h2>
+					</div>
+					<h3 class="chevron">JavaScript</h3>
+					<h3 class="chevron">Style</h3>
+					<h3 class="chevron layout">Layout</h3>
+					<h3 class="chevron paint">Paint</h3>
+					<h3 class="chevron composite">Composite</h3>
+				</div>
+			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="cycle">
+					<div class="main">
+						<h1 class="small">Repaint</h1>
+						<h2>
+							<code>color<br>background</code>
+						</h2>
+					</div>
+					<h3 class="chevron">JavaScript</h3>
+					<h3 class="chevron">Style</h3>
+					<h3 class="chevron">Layout</h3>
+					<h3 class="chevron paint">Paint</h3>
+					<h3 class="chevron composite">Composite</h3>
+				</div>
+			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="cycle">
+					<div class="main">
+						<h1 class="small">Compose</h1>
+						<h2>
+							<code>transform<br>opacity</code>
+						</h2>
+					</div>
+					<h3 class="chevron">JavaScript</h3>
+					<h3 class="chevron">Style</h3>
+					<h3 class="chevron">Layout</h3>
+					<h3 class="chevron">Paint</h3>
+					<h3 class="chevron composite">Composite</h3>
+				</div>
+			</section>
 			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1 class="big">CSS</h1>
 			</section>
@@ -66,8 +118,8 @@
 				<h1 class="small">Animate compositor-only properties</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="square slow"></div>
-				<div class="square fast"></div>
+				<div class="square slow">Left</div>
+				<div class="square fast">Translate</div>
 				<button class="button" id="work">Execute long JS task</button>
 				<button class="button" id="start">Start heavy JS loop</button>
 				<button class="button" id="stop">Stop heavy JS loop</button>
@@ -104,7 +156,9 @@
 			</section>
 			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1>Create layers</h1>
-				<h1><code>will-change</code></h1>
+				<h1>
+					<code>will-change</code>
+				</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
 				<h1>Disable hover on scroll</h1>
@@ -119,12 +173,14 @@
 				<h1>Avoid forced synchronous layout</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h3 style="text-align: left"><code>
+				<h3 style="text-align: left">
+					<code>
 elements.forEach(el => {<br>
 &nbsp;&nbsp;el.style.width<br>
 &nbsp;&nbsp;&nbsp;&nbsp;= `${el.offsetWidth}px`<br>
 })
-				</code></h3>
+				</code>
+				</h3>
 			</section>
 			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1 class="big">rAF</h1>
@@ -141,15 +197,20 @@ elements.forEach(el => {<br>
 				<h1>Web workers</h1>
 			</section>
 			<section data-background-image="/img/rail.jpg">
-				<h1 class="shadow fragment">TARGET<br><big>RAIL</big></h1>
+				<h1 class="shadow fragment">TARGET
+					<br>
+					<big>RAIL</big>
+				</h1>
 			</section>
 			<section data-background-image="/img/rail.jpg">
-				<h2 class="shadow"><code>
-Response&nbsp;&nbsp;<&nbsp;100ms<br>
-Animation&nbsp;&nbsp;<&nbsp;16ms<br>
-Idle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;50ms<br>
-Load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;1000ms<br>
-				</code></h2>
+				<h1 class="shadow small">
+					<code>
+Response&nbsp;<100ms<br>
+Animation&nbsp;<16ms<br>
+Idle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<50ms<br>
+Load&nbsp;&nbsp;&nbsp;&nbsp;<1000ms<br>
+				</code>
+				</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1 class="big">FLIP</h1>
@@ -157,57 +218,103 @@ Load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<&nbsp;1000ms<br>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>First</h1>
-				<h4 style="text-align: left"><code>
+				<h4 style="text-align: left">
+					<code>
 const first =<br>
 &nbsp;&nbsp;el.getBoundingClientRect();
-				</code></h4>
+				</code>
+				</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Last</h1>
-				<h4 style="text-align: left"><code>
+				<h4 style="text-align: left">
+					<code>
 el.classList.toggle('end');<br>
 const last =<br>
 &nbsp;&nbsp;el.getBoundingClientRect();
-				</code></h4>
+				</code>
+				</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Invert</h1>
-				<h4 style="text-align: left"><code>
+				<h4 style="text-align: left">
+					<code>
 const invert =<br>
 &nbsp;&nbsp;first.height / last.height;
-				</code></h4>
+				</code>
+				</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
 				<h1>Play</h1>
-				<h4 style="text-align: left"><code>
+				<h4 style="text-align: left">
+					<code>
 el.animate([<br>
 &nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
 &nbsp;&nbsp;{ transform: 'scale(0)' }<br>
 ], 300);
-				</code></h4>
+				</code>
+				</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<div class="flip-wrapper">
 					<div class="flip-demo">
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
-						<div><div class="flip-el"></div></div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
+						<div>
+							<div class="flip-el"></div>
+						</div>
 					</div>
 				</div>
 				<script>
@@ -226,7 +333,7 @@ el.animate([<br>
 						var scaleX = first.width / last.width;
 						var scaleY = first.height / last.height;
 
-						requestAnimationFrame(function() {
+						requestAnimationFrame(function () {
 							el.animate([
 								{ transform: `translate(${invertX}px, ${invertY}px) scale(${scaleX}, ${scaleY})` },
 								{ transform: `translate(0, 0) scale(1, 1)` }
@@ -238,12 +345,12 @@ el.animate([<br>
 			<aside class="notes">
 				Animate not transitionable properties
 			</aside>
-<!-- update codepen -->
+			<!-- update codepen -->
 			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)" data-background-color="#1C4587">
 				<h1>
-					Content<br>
-					VS<br>
-					Animations
+					Content
+					<br> VS
+					<br> Animations
 				</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #1C4587, #DC2430)" data-background-color="#1C4587">
@@ -258,15 +365,19 @@ el.animate([<br>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<h1>Links</h1>
 				<ul>
-					<li><a href="https://codepen.io/gcmznt/pen/xYXgzQ">Left vs transform animation: https://codepen.io/gcmznt/pen/xYXgzQ</a></li>
-					<li><a href="https://codepen.io/gcmznt/pen/zrJqZR">FLIP example: https://codepen.io/gcmznt/pen/zrJqZR</a></li>
+					<li>
+						<a href="https://codepen.io/gcmznt/pen/xYXgzQ">Left vs transform animation: https://codepen.io/gcmznt/pen/xYXgzQ</a>
+					</li>
+					<li>
+						<a href="https://codepen.io/gcmznt/pen/zrJqZR">FLIP example: https://codepen.io/gcmznt/pen/zrJqZR</a>
+					</li>
 					<!-- Links -->
 				</ul>
 			</section>
 		</div>
 		<div class="scene">
 			<div class="sky"></div>
-<!-- clouds -->
+			<!-- clouds -->
 			<div class="sun"></div>
 			<div class="moon"></div>
 			<div class="dolphin">
@@ -291,4 +402,5 @@ el.animate([<br>
 		});
 	</script>
 </body>
+
 </html>

@@ -402,8 +402,8 @@ body {
     opacity: 1; } }
 
 .reveal .square {
-  --size: 150px;
-  --margin: 40px;
+  --size: 200px;
+  --margin: 20px;
   height: var(--size);
   width: var(--size);
   background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
@@ -411,7 +411,12 @@ body {
   margin: var(--margin);
   border-radius: 50%;
   left: 0;
-  animation: 5s linear infinite alternate; }
+  animation: 3s linear infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #000; }
   .reveal .square.slow {
     animation-name: slow; }
   .reveal .square.fast {
@@ -419,11 +424,12 @@ body {
     animation-name: fast; }
 
 .button {
-  background: transparent;
-  color: currentColor;
-  border: 3px solid currentColor;
+  background: white;
+  color: black;
+  border: 0;
+  font-weight: 800;
   border-radius: 100px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   margin: 20px;
   font-size: 0.7em;
   font-family: inherit; }
@@ -438,7 +444,7 @@ body {
 
 .flip-wrapper {
   overflow: auto;
-  max-height: 700px;
+  max-height: 640px;
   position: relative; }
 
 .flip-demo {
@@ -487,10 +493,103 @@ body {
 .flip-demo > div:nth-child(8n + 7) {
   --bg: #795548; }
 
+.reveal .cycle {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 20%;
+  grid-gap: 10px 50px;
+  align-items: center; }
+  .reveal .cycle .main {
+    grid-row: span 5; }
+
+.reveal .chevron {
+  position: relative;
+  padding: 20px 10px 10px;
+  margin: 0; }
+  .reveal .chevron::before, .reveal .chevron::after {
+    position: absolute;
+    background: var(--col);
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    z-index: -1; }
+  .reveal .chevron::before {
+    transform: skewY(5deg);
+    left: 0; }
+  .reveal .chevron::after {
+    transform: skewY(-5deg);
+    right: 0; }
+  .reveal .chevron.js {
+    --col: #ffab40; }
+  .reveal .chevron.style, .reveal .chevron.layout {
+    --col: #9900ff; }
+  .reveal .chevron.paint, .reveal .chevron.composite {
+    --col: #6aa84f; }
+
+.reveal .thermometer {
+  font-size: 30px;
+  width: 300px;
+  height: 1em;
+  border-radius: 100px;
+  background: #fff;
+  margin: 2em;
+  position: relative;
+  animation: shake infinite ease alternate 1s;
+  display: inline-block; }
+  .reveal .thermometer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #C4443C;
+    border-radius: 100px;
+    border: 0.25em solid white;
+    background-clip: content-box;
+    height: 2em;
+    width: 2em;
+    top: -0.5em;
+    left: -0.5em;
+    box-sizing: border-box; }
+  .reveal .thermometer::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 0.25em solid transparent;
+    border-radius: 10em;
+    box-sizing: border-box;
+    background-clip: content-box;
+    background-color: #C4443C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: temperature infinite ease alternate 1s;
+    transform-origin: left center; }
+
+@keyframes temperature {
+  50% {
+    transform: scaleX(1); }
+  to {
+    transform: scaleX(0.75); } }
+
+@keyframes shake {
+  from {
+    transform: rotate(0deg); }
+  8% {
+    transform: rotate(-5deg); }
+  16% {
+    transform: rotate(5deg); }
+  24% {
+    transform: rotate(-5deg); }
+  32% {
+    transform: rotate(5deg); }
+  48% {
+    transform: rotate(0deg); } }
+
 .reveal h1.main {
   color: #0dd;
   font-size: 120px;
-  text-shadow: 0 0 28px #0dd !important; }
+  animation: neon infinite ease 1s alternate; }
 
 .has-scene .reveal h1 {
   text-shadow: 0 0 200px #021b79; }
@@ -512,3 +611,19 @@ body {
   background: transparent;
   border: 0;
   box-shadow: none; }
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #0dd; }
+  80% {
+    text-shadow: 0 0 28px #0dd; }
+  84% {
+    text-shadow: 0 0 45px #0dd; }
+  88% {
+    text-shadow: 0 0 22px #0dd; }
+  92% {
+    text-shadow: 0 0 38px #0dd; }
+  96% {
+    text-shadow: 0 0 20px #0dd; }
+  to {
+    text-shadow: 0 0 28px #0dd; } }

@@ -50,13 +50,16 @@ section.has-light-background {
 @import '../template/battery';
 @import '../template/squares';
 @import '../template/flip';
+@import '../template/cycle';
+@import '../template/thermometer';
 // ---------------------------------------------
 
 .reveal {
 	h1.main {
 		color: #0dd;
 		font-size: 120px;
-		text-shadow: 0 0 28px #0dd !important;
+		// text-shadow: 0 0 28px #0dd !important;
+		animation: neon infinite ease 1s alternate;
 	}
 
 	.has-scene & h1 {
@@ -84,5 +87,15 @@ section.has-light-background {
 		border: 0;
 		box-shadow: none;
 	}
+}
+
+@keyframes neon {
+	from { text-shadow: 0 0 10px #0dd; }
+	80% { text-shadow: 0 0 28px #0dd; }
+	84% { text-shadow: 0 0 45px #0dd; }
+	88% { text-shadow: 0 0 22px #0dd; }
+	92% { text-shadow: 0 0 38px #0dd; }
+	96% { text-shadow: 0 0 20px #0dd; }
+	to { text-shadow: 0 0 28px #0dd; }
 }
 	

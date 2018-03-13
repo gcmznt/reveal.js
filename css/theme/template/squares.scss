@@ -1,6 +1,6 @@
 .reveal .square {
-  --size: 150px;
-  --margin: 40px;
+  --size: 200px;
+  --margin: 20px;
 
   height: var(--size);
   width: var(--size);
@@ -9,7 +9,12 @@
   margin: var(--margin);
   border-radius: 50%;
   left: 0;
-  animation: 5s linear infinite alternate;
+  animation: 3s linear infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #000;
   
   &.slow {
     animation-name: slow;
@@ -22,11 +27,12 @@
 }
 
 .button {
-  background: transparent;
-  color: currentColor;
-  border: 3px solid currentColor;
+  background: white;
+  color: black;
+  border: 0;
+  font-weight: 800;
   border-radius: 100px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   margin: 20px;
   font-size: 0.7em;
   font-family: inherit;

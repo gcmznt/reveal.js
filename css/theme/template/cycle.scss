@@ -1,0 +1,52 @@
+.reveal .cycle {
+  display: grid;
+  // width: 100%;
+  // height: 100%;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 20%;
+  grid-gap: 10px 50px;
+  align-items: center;
+
+  .main {
+    grid-row: span 5;
+  }
+}
+
+.reveal .chevron {
+  position: relative;
+  padding: 20px 10px 10px;
+  margin: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    background: var(--col);
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    transform: skewY(5deg);
+    left: 0;
+  }
+  &::after {
+    transform: skewY(-5deg);
+    right: 0;
+  }
+
+  &.js {
+    --col: #ffab40;
+  }
+  &.style,
+  &.layout {
+    --col: #9900ff;
+  }
+  &.paint,
+  &.composite {
+    --col: #6aa84f;
+  }
+}
