@@ -1,0 +1,86 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/open-sans/open-sans.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #111;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 42px;
+$mainFont: 'Open Sans', Helvetica, sans-serif;
+$headingFont: 'Open Sans', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 800;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 3em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+@import '../template/scene';
+@import '../template/battery';
+// ---------------------------------------------
+
+.reveal {
+	h1.main {
+		color: #0dd;
+		font-size: 120px;
+		text-shadow: 0 0 28px #0dd !important;
+	}
+
+	.has-scene & h1 {
+		text-shadow: 0 0 200px #021b79;
+	}
+
+	h1.shadow,
+	h2.shadow,
+	h3.shadow {
+		text-shadow: 0 0 100px #000;
+	}
+
+	h1.big,
+	h1 big {
+		font-size: 280px;
+	}
+
+	h1.small {
+		font-size: 100px;
+	}
+
+	section img {
+		margin: 15px 0px;
+		background: transparent;
+		border: 0;
+		box-shadow: none;
+	}
+}
+	

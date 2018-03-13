@@ -1,0 +1,113 @@
+.scene {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: opacity ease 800ms;
+
+  html.has-scene--slow & {
+    --fn: steps(15);
+  }
+
+  html:not(.has-scene) & {
+    opacity: 0;
+  }
+}
+
+.sky {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #021B79, #a1c4fd, #c2e9fb);
+  animation: gradient 7s var(--fn, ease-in-out) infinite alternate;
+	background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.sun {
+  --size: 100px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  color: #ff0;
+  background-color: currentColor;
+  position: absolute;
+  top: 98vh;
+  left: calc(50% - var(--size) / 2);
+  border-radius: 50%;
+  box-shadow: 0 0 5px currentColor;
+  animation: sun 14s var(--fn, linear) infinite;
+}
+
+.moon {
+  --size: 100px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  box-sizing: border-box;
+  color: #fff;
+  border-right: 15px solid currentColor;
+  position: absolute;
+  top: 98vh;
+  left: calc(50% - var(--size) / 2);
+  animation: sun 14s var(--fn, linear) infinite -7s;
+  border-radius: 50%;
+}
+
+@keyframes sun {
+  from {
+    transform: rotate(-135deg) translateY(-93vh) rotate(135deg);
+  }
+  to {
+    transform: rotate(135deg) translateY(-93vh) rotate(-135deg);
+  }
+}
+
+.dolphin {
+  fill: #000;
+  width: 250px;
+  position: absolute;
+  top: 100%;
+  animation: swim 16s var(--fn, linear) infinite -7s, jump 6s var(--fn, linear) infinite -7s;
+}
+
+@keyframes jump {
+  from { transform: rotate(360deg) translateY(-150%) }
+  to { transform: rotate(0) translateY(-150%) }
+}
+
+@keyframes swim {
+  from { left: 100% }
+  to { left: -250px }
+}
+
+.sea {
+  position: absolute;
+  height: 75px;
+  animation: sea 16s var(--fn, linear) infinite, light 7s var(--fn, linear) infinite alternate;
+  width: 100%;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="30 0 470 200" xmlns="http://www.w3.org/2000/svg"><path d="M0 .8828125s21.5375284 1.81826474 30.175 7.23534645C70.4419893 33.3720274 173.689709 104.747595 239.525 104.747595c66.932042 0 169.408103-60.9975124 212.396875-83.0582193C494.910647-.3713312 500 8.11815895 500 8.11815895V200.882812H0V.8828125z" fill="#595CA5" fill-rule="evenodd"/></svg>');
+}
+
+.sea--2 {
+  transform: scale(1.5);
+}
+
+@keyframes sea {
+  from { background-position: 0% center }
+  to { background-position: 100% center }
+}
+
+@keyframes light {
+  from { opacity: 0.8; }
+  to { opacity: 0.5; }
+}
