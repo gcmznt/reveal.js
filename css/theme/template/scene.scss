@@ -1,4 +1,4 @@
-.scene {
+.reveal .scene {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -14,7 +14,7 @@
   }
 }
 
-.sky {
+.reveal .sky {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -32,7 +32,7 @@
   }
 }
 
-.sun {
+.reveal .sun {
   --size: 100px;
   display: block;
   width: var(--size);
@@ -47,7 +47,7 @@
   animation: sun 14s var(--fn, linear) infinite;
 }
 
-.moon {
+.reveal .moon {
   --size: 100px;
   display: block;
   width: var(--size);
@@ -71,9 +71,79 @@
   }
 }
 
-.dolphin {
+.reveal .cloud {
+  background-color: #fff;
+  font-size: 10px;
+  width: 20em;
+  height: 6em;
+  border-radius: 1000em;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  opacity: 0.7;
+  animation: cloud-move 25s var(--fn, linear) infinite;
+
+  &--1 {
+    font-size: 8px;
+    top: 18%;
+    animation-delay: -1.5s;
+  }
+
+  &--2 {
+    font-size: 12px;
+    top: 21%;
+    animation-delay: -3.5s;
+  }
+
+  &::before {
+    content: '';
+    background-color: inherit;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    background-color: inherit;
+    width: 8em;
+    height: 8em;
+    position: absolute;
+    bottom: 45%;
+    left: 18%;
+    border-radius: 50%;
+  }
+}
+
+@keyframes cloud-move {
+  from { transform: translateX(-110%) }
+  to { transform: translateX(110vw) }
+}
+
+.reveal .ship {
+  position: absolute;
+  width: 600px;
+  bottom: 0;
+  opacity: 0.7;
+  animation: navigate 15s var(--fn, linear) infinite, sway 4s var(--fn, ease-in-out) infinite alternate;
+}
+
+@keyframes navigate {
+  from { left: -700px }
+  to { left: 120% }
+}
+
+@keyframes sway {
+  from { transform: scaleX(-1) rotate(0.2rad); }
+  to { transform: scaleX(-1) rotate(0rad); }
+}
+
+.reveal .dolphin {
   fill: #000;
-  width: 250px;
+  width: 200px;
   position: absolute;
   top: 100%;
   animation: swim 16s var(--fn, linear) infinite -7s, jump 6s var(--fn, linear) infinite -7s;
@@ -89,7 +159,7 @@
   to { left: -250px }
 }
 
-.sea {
+.reveal .sea {
   position: absolute;
   height: 75px;
   animation: sea 16s var(--fn, linear) infinite, light 7s var(--fn, linear) infinite alternate;
@@ -98,7 +168,7 @@
   background: url('data:image/svg+xml;utf8,<svg viewBox="30 0 470 200" xmlns="http://www.w3.org/2000/svg"><path d="M0 .8828125s21.5375284 1.81826474 30.175 7.23534645C70.4419893 33.3720274 173.689709 104.747595 239.525 104.747595c66.932042 0 169.408103-60.9975124 212.396875-83.0582193C494.910647-.3713312 500 8.11815895 500 8.11815895V200.882812H0V.8828125z" fill="#595CA5" fill-rule="evenodd"/></svg>');
 }
 
-.sea--2 {
+.reveal .sea--2 {
   transform: scale(1.5);
 }
 
