@@ -280,7 +280,8 @@ body {
   width: 100vw;
   background: linear-gradient(180deg, #0d3250, #a1c4fd, #c2e9fb);
   animation: gradient 7s var(--fn, ease-in-out) infinite alternate;
-  background-size: 400% 400%; }
+  background-size: 400% 400%;
+  will-change: transform; }
 
 @keyframes gradient {
   0% {
@@ -295,7 +296,8 @@ body {
   background: url(/img/stars.svg);
   background-size: 600px;
   opacity: 0;
-  animation: stars 14s var(--fn, ease-in-out) infinite alternate; }
+  animation: stars 14s var(--fn, ease-in-out) infinite alternate;
+  will-change: opacity; }
 
 @keyframes stars {
   0% {
@@ -318,8 +320,8 @@ body {
   top: 98vh;
   left: calc(50% - var(--size) / 2);
   border-radius: 50%;
-  box-shadow: 0 0 5px currentColor;
-  animation: sun 14s var(--fn, linear) infinite; }
+  animation: sun 14s var(--fn, linear) infinite;
+  will-change: transform; }
 
 .reveal .moon {
   --size: 100px;
@@ -333,7 +335,8 @@ body {
   top: 98vh;
   left: calc(50% - var(--size) / 2);
   animation: sun 14s var(--fn, linear) infinite -7s;
-  border-radius: 50%; }
+  border-radius: 50%;
+  will-change: transform; }
 
 @keyframes sun {
   from {
@@ -351,7 +354,8 @@ body {
   top: 20%;
   left: 0;
   opacity: 0.7;
-  animation: cloud-move 25s var(--fn, linear) infinite; }
+  animation: cloud-move 25s var(--fn, linear) infinite;
+  will-change: transform; }
   .reveal .cloud--1 {
     font-size: 8px;
     top: 18%;
@@ -389,11 +393,12 @@ body {
   position: absolute;
   width: 600px;
   bottom: 0;
-  opacity: 0.7;
-  animation: navigate 15s var(--fn, linear) infinite; }
+  animation: navigate 15s var(--fn, linear) infinite;
+  will-change: transform; }
 
 .reveal .ship-img {
-  animation: sway 4s var(--fn, ease-in-out) infinite alternate; }
+  animation: sway 4s var(--fn, ease-in-out) infinite alternate;
+  will-change: transform; }
 
 @keyframes navigate {
   from {
@@ -412,10 +417,12 @@ body {
   width: 200px;
   position: absolute;
   top: 100%;
-  animation: swim 16s var(--fn, linear) infinite -7s; }
+  animation: swim 16s var(--fn, linear) infinite -7s;
+  will-change: transform; }
 
 .reveal .dolphin-img {
-  animation: jump 6s var(--fn, linear) infinite -7s; }
+  animation: jump 6s var(--fn, linear) infinite -7s;
+  will-change: transform; }
 
 @keyframes jump {
   from {
@@ -435,7 +442,8 @@ body {
   animation: sea 16s var(--fn, linear) infinite, light 7s var(--fn, linear) infinite alternate;
   width: 100%;
   bottom: 0;
-  background: url(/img/waves.svg); }
+  background: url(/img/waves.svg);
+  will-change: transform; }
 
 .reveal .sea--2 {
   transform: scale(1.5); }

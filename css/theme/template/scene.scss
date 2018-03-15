@@ -20,7 +20,8 @@
   width: 100vw;
   background: linear-gradient(180deg, #0d3250, #a1c4fd, #c2e9fb);
   animation: gradient 7s var(--fn, ease-in-out) infinite alternate;
-	background-size: 400% 400%;
+  background-size: 400% 400%;
+  will-change: transform;
 }
 
 @keyframes gradient {
@@ -40,6 +41,7 @@
   background-size: 600px;
   opacity: 0;
   animation: stars 14s var(--fn, ease-in-out) infinite alternate;
+  will-change: opacity;
 }
 
 @keyframes stars {
@@ -68,8 +70,8 @@
   top: 98vh;
   left: calc(50% - var(--size) / 2);
   border-radius: 50%;
-  box-shadow: 0 0 5px currentColor;
   animation: sun 14s var(--fn, linear) infinite;
+  will-change: transform;
 }
 
 .reveal .moon {
@@ -85,6 +87,7 @@
   left: calc(50% - var(--size) / 2);
   animation: sun 14s var(--fn, linear) infinite -7s;
   border-radius: 50%;
+  will-change: transform;
 }
 
 @keyframes sun {
@@ -107,6 +110,7 @@
   left: 0;
   opacity: 0.7;
   animation: cloud-move 25s var(--fn, linear) infinite;
+  will-change: transform;
 
   &--1 {
     font-size: 8px;
@@ -152,12 +156,13 @@
   position: absolute;
   width: 600px;
   bottom: 0;
-  opacity: 0.7;
   animation: navigate 15s var(--fn, linear) infinite;
+  will-change: transform;
 }
 
 .reveal .ship-img {
   animation: sway 4s var(--fn, ease-in-out) infinite alternate;
+  will-change: transform;
 }
 
 @keyframes navigate {
@@ -176,10 +181,12 @@
   position: absolute;
   top: 100%;
   animation: swim 16s var(--fn, linear) infinite -7s;
+  will-change: transform;
 }
 
 .reveal .dolphin-img {
   animation: jump 6s var(--fn, linear) infinite -7s;
+  will-change: transform;
 }
 
 @keyframes jump {
@@ -199,6 +206,7 @@
   width: 100%;
   bottom: 0;
   background: url(/img/waves.svg);
+  will-change: transform;
 }
 
 .reveal .sea--2 {
