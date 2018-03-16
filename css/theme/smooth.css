@@ -354,7 +354,7 @@ body {
   top: 20%;
   left: 0;
   opacity: 0.7;
-  animation: cloud-move 25s var(--fn, linear) infinite;
+  animation: cloud-move 29s var(--fn, linear) infinite;
   will-change: transform; }
   .reveal .cloud--1 {
     font-size: 8px;
@@ -393,7 +393,7 @@ body {
   position: absolute;
   width: 600px;
   bottom: 0;
-  animation: navigate 15s var(--fn, linear) infinite;
+  animation: navigate 19s var(--fn, linear) infinite;
   will-change: transform; }
 
 .reveal .ship-img {
@@ -417,11 +417,12 @@ body {
   width: 200px;
   position: absolute;
   top: 100%;
-  animation: swim 16s var(--fn, linear) infinite -7s;
+  left: 0;
+  animation: swim 16s var(--fn, linear) infinite;
   will-change: transform; }
 
 .reveal .dolphin-img {
-  animation: jump 6s var(--fn, linear) infinite -7s;
+  animation: jump 4s var(--fn, linear) infinite;
   will-change: transform; }
 
 @keyframes jump {
@@ -432,9 +433,9 @@ body {
 
 @keyframes swim {
   from {
-    transfrom: translateX(110vw); }
+    transform: translateX(110vw); }
   to {
-    transfrom: translateX(-110%); } }
+    transform: translateX(-110%); } }
 
 .reveal .sea {
   position: absolute;
