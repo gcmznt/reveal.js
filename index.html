@@ -69,6 +69,18 @@
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<div class="cycle">
 					<div class="main">
+						<h1 class="small">Our code</h1>
+					</div>
+					<h3 class="chevron js">JavaScript</h3>
+					<h3 class="chevron style">Style</h3>
+					<h3 class="chevron">Layout</h3>
+					<h3 class="chevron">Paint</h3>
+					<h3 class="chevron">Composite</h3>
+				</div>
+			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<div class="cycle">
+					<div class="main">
 						<h2>
 							<code>margin<br>padding</code>
 						</h2>
@@ -164,7 +176,7 @@
 				</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h1>❌</h1>
+				<h2>❌</h2>
 				<h3 style="text-align: left">
 					<code>
 * {<br>
@@ -186,15 +198,29 @@
 				<h1>Avoid forced synchronous layout</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h1>❌</h1>
-				<h3 style="text-align: left">
+				<h2>❌</h2>
+				<h4 style="text-align: left">
 					<code>
 elements.forEach(el => {<br>
-&nbsp;&nbsp;el.style.width<br>
-&nbsp;&nbsp;&nbsp;&nbsp;= `${el.offsetWidth}px`<br>
+&nbsp;&nbsp;el.querySelector('img').style.width<br>
+&nbsp;&nbsp;&nbsp;&nbsp;= `${el.offsetWidth}px`;<br>
 })
-				</code>
-				</h3>
+					</code>
+				</h4>
+			</section>
+			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
+				<h2>✅</h2>
+				<h4 style="text-align: left">
+					<code>
+elements.forEach((el, i) => {<br>
+&nbsp;&nbsp;ws[i] = el.offsetWidth;<br>
+})<br>
+elements.forEach((el, i) => {<br>
+&nbsp;&nbsp;el.querySelector('img').style.width<br>
+&nbsp;&nbsp;&nbsp;&nbsp;= `${ws[i]}px`;<br>
+})
+					</code>
+				</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1 class="big">rAF</h1>
@@ -213,9 +239,9 @@ elements.forEach(el => {<br>
 			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Web workers</h1>
 			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
+			<!-- <section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
 				<h1>Passive listener on scroll</h1>
-			</section>
+			</section> -->
 			<section data-background-image="/img/rail.jpg">
 				<h1 class="shadow fragment">
 					TARGET
@@ -237,47 +263,57 @@ Load&nbsp;&nbsp;&nbsp;&nbsp;<1000ms<br>
 				<h1 class="big">FLIP</h1>
 				<h3>by @aerotwist</h3>
 			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1>First</h1>
-				<h4 style="text-align: left">
-					<code>
-const first =<br>
-&nbsp;&nbsp;el.getBoundingClientRect();
-				</code>
-				</h4>
+			<section>
+				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+					<h1>First</h1>
+					<h4 style="text-align: left">
+						<code>
+	const first =<br>
+	&nbsp;&nbsp;el.getBoundingClientRect();
+					</code>
+					</h4>
+				</section>
+				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+					<h1>Last</h1>
+					<h4 style="text-align: left">
+						<code>
+	el.classList.toggle('end');<br>
+	const last =<br>
+	&nbsp;&nbsp;el.getBoundingClientRect();
+					</code>
+					</h4>
+				</section>
+				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+					<h1>Invert</h1>
+					<h4 style="text-align: left">
+						<code>
+	const invert =<br>
+	&nbsp;&nbsp;first.height / last.height;
+					</code>
+					</h4>
+				</section>
+				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+					<h1>Play</h1>
+					<h4 style="text-align: left">
+						<code>
+	el.animate([<br>
+	&nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
+	&nbsp;&nbsp;{ transform: 'scale(0)' }<br>
+	], 300);
+					</code>
+					</h4>
+					<aside class="notes">
+						Content can get distorted
+					</aside>
+				</section>
 			</section>
 			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1>Last</h1>
-				<h4 style="text-align: left">
-					<code>
-el.classList.toggle('end');<br>
-const last =<br>
-&nbsp;&nbsp;el.getBoundingClientRect();
-				</code>
-				</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1>Invert</h1>
-				<h4 style="text-align: left">
-					<code>
-const invert =<br>
-&nbsp;&nbsp;first.height / last.height;
-				</code>
-				</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1>Play</h1>
-				<h4 style="text-align: left">
-					<code>
-el.animate([<br>
-&nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
-&nbsp;&nbsp;{ transform: 'scale(0)' }<br>
-], 300);
-				</code>
-				</h4>
-				<aside class="notes">
-					Content can get distorted
-				</aside>
+				<h1 class="small">
+					<code>First&nbsp;
+					<br>Last&nbsp;&nbsp;
+					<br>Invert
+					<br>Play&nbsp;&nbsp;&nbsp;</code>
+				</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<div class="flip-wrapper">
