@@ -268,7 +268,8 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  transition: opacity ease 800ms; }
+  transition: opacity ease 800ms;
+  z-index: 1; }
   html.has-scene--slow .reveal .scene {
     --fn: steps(15); }
   html:not(.has-scene) .reveal .scene {
@@ -541,7 +542,7 @@ body {
 
 .flip-wrapper {
   overflow: auto;
-  max-height: 640px;
+  max-height: 540px;
   position: relative; }
 
 .flip-demo {
@@ -605,6 +606,9 @@ body {
   position: relative;
   padding: 20px 10px 10px;
   margin: 0; }
+  .reveal .chevron span {
+    z-index: 2;
+    position: relative; }
   .reveal .chevron::before, .reveal .chevron::after {
     position: absolute;
     background: var(--col);
@@ -612,8 +616,7 @@ body {
     content: '';
     width: 50%;
     height: 100%;
-    top: 0;
-    z-index: -1; }
+    top: 0; }
   .reveal .chevron::before {
     transform: skewY(5deg);
     left: 0; }
@@ -726,3 +729,12 @@ body {
     text-shadow: 0 0 20px #0dd; }
   to {
     text-shadow: 0 0 28px #0dd; } }
+
+.codepen {
+  width: 50px; }
+
+.reveal .slides {
+  z-index: 2; }
+
+.reveal a:hover img {
+  box-shadow: none; }

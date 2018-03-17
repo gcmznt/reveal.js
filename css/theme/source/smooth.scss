@@ -98,4 +98,15 @@ section.has-light-background {
 	96% { text-shadow: 0 0 20px #0dd; }
 	to { text-shadow: 0 0 28px #0dd; }
 }
-	
+
+.codepen {
+	width: 50px;
+}
+
+.reveal .slides {
+	z-index: 2;
+}
+
+.reveal a:hover img {
+	box-shadow: none;
+}

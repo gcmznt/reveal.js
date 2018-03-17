@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   transition: opacity ease 800ms;
+  z-index: 1;
 
   html.has-scene--slow & {
     --fn: steps(15);
