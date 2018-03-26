@@ -737,4 +737,5 @@ body {
   z-index: 2; }
 
 .reveal a:hover img {
-  box-shadow: none; }
+  box-shadow: none;
+  background: transparent; }
