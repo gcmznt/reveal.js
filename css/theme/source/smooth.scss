@@ -56,10 +56,14 @@ section.has-light-background {
 
 .reveal {
 	h1.main {
-		color: #0dd;
+		color: #005dad;
 		font-size: 120px;
-		// text-shadow: 0 0 28px #0dd !important;
-		animation: neon infinite ease 1s alternate;
+		// text-shadow: 0 0 28px #005dad !important;
+		// animation: neon infinite ease 1s alternate;
+	}
+
+	h4.main {
+		color: #005dad;
 	}
 
 	.has-scene & h1 {
@@ -90,13 +94,13 @@ section.has-light-background {
 }
 
 @keyframes neon {
-	from { text-shadow: 0 0 10px #0dd; }
-	80% { text-shadow: 0 0 28px #0dd; }
-	84% { text-shadow: 0 0 45px #0dd; }
-	88% { text-shadow: 0 0 22px #0dd; }
-	92% { text-shadow: 0 0 38px #0dd; }
-	96% { text-shadow: 0 0 20px #0dd; }
-	to { text-shadow: 0 0 28px #0dd; }
+	from { text-shadow: 0 0 10px #005dad; }
+	80% { text-shadow: 0 0 28px #005dad; }
+	84% { text-shadow: 0 0 45px #005dad; }
+	88% { text-shadow: 0 0 22px #005dad; }
+	92% { text-shadow: 0 0 38px #005dad; }
+	96% { text-shadow: 0 0 20px #005dad; }
+	to { text-shadow: 0 0 28px #005dad; }
 }
 
 .codepen {

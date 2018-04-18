@@ -689,9 +689,11 @@ body {
     transform: rotate(0deg); } }
 
 .reveal h1.main {
-  color: #0dd;
-  font-size: 120px;
-  animation: neon infinite ease 1s alternate; }
+  color: #005dad;
+  font-size: 120px; }
+
+.reveal h4.main {
+  color: #005dad; }
 
 .has-scene .reveal h1 {
   text-shadow: 0 0 200px #021b79; }
@@ -716,19 +718,19 @@ body {
 
 @keyframes neon {
   from {
-    text-shadow: 0 0 10px #0dd; }
+    text-shadow: 0 0 10px #005dad; }
   80% {
-    text-shadow: 0 0 28px #0dd; }
+    text-shadow: 0 0 28px #005dad; }
   84% {
-    text-shadow: 0 0 45px #0dd; }
+    text-shadow: 0 0 45px #005dad; }
   88% {
-    text-shadow: 0 0 22px #0dd; }
+    text-shadow: 0 0 22px #005dad; }
   92% {
-    text-shadow: 0 0 38px #0dd; }
+    text-shadow: 0 0 38px #005dad; }
   96% {
-    text-shadow: 0 0 20px #0dd; }
+    text-shadow: 0 0 20px #005dad; }
   to {
-    text-shadow: 0 0 28px #0dd; } }
+    text-shadow: 0 0 28px #005dad; } }
 
 .codepen {
   width: 50px; }
