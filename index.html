@@ -5,22 +5,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Super smooth animations</title>
+	<title>👍 Hitchhiker's guide to the Universe</title>
 
-	<meta property="og:url" content="https://cssday2018.slides.giko.it" />
+	<meta property="og:url" content="https://universaljsday2018.slides.giko.it" />
 	<meta property="og:site_name" content="Slides @giko.it" />
-	<meta property="og:title" content="Super Smooth Animations" />
-	<meta property="og:description" content="My slides for CSSDay 2018 in Faenza (Italy)" />
+	<meta property="og:title" content="👍 Hitchhiker's guide to the Universe" />
+	<meta property="og:description" content="My slides for Universaljs Day 2018 in Ferrara (Italy)" />
 	<meta property="og:type" content="website" />
 	<meta property="og:author" content="https://cv.giko.it" />
-	<meta property="og:image" content="https://cssday2018.slides.giko.it/img/cover.png" />
+	<meta property="og:image" content="https://universaljsday2018.slides.giko.it/img/cover.jpg" />
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="giko.it">
 	<meta name="twitter:creator" content="@gcmznt">
-	<meta name="twitter:title" content="Super Smooth Animations">
+	<meta name="twitter:title" content="👍 Hitchhiker's guide to the Universe">
 	<meta name="twitter:description" content="My slides for CSSDay 2018 in Faenza (Italy)">
-	<meta name="twitter:image:src" content="https://cssday2018.slides.giko.it/img/cover.png">
+	<meta name="twitter:image:src" content="https://universaljsday2018.slides.giko.it/img/cover.jpg">
 
 
 	<link rel="stylesheet" href="css/reveal.css">
@@ -52,519 +52,222 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1 class="main">Super smooth animations</h1>
-				<img src="./img/logo.svg" style="width: 350px" />
-			</section>
-			<section data-state="has-scene">
-				<h1>Expectation</h1>
-				<p>
-					<a href="https://codepen.io/gcmznt/pen/eVyxoY">
-						<img class="codepen" src="/img/codepen.svg" />
-					</a>
-				</p>
-			</section>
-			<section data-state="has-scene has-scene--slow">
-				<h1>Reality</h1>
-				<p>
-					<a href="https://codepen.io/gcmznt/pen/eVyxoY">
-						<img class="codepen" src="/img/codepen.svg" />
-					</a>
-				</p>
+				<h1 class="main">Hitchhiker's guide to the Universe</h1>
+				<div class="thumb-wrapper">
+					<img src="./img/thumb.png" style="width: 250px" />
+				</div>
+				<h4 class="main">Universal JS Day - 20 April 2018 - Ferrara</h4>
 			</section>
 			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
-				<h1>Battery drain</h1>
-				<div class="battery"></div>
+				<h1 class="big">Web</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
-				<h1>Device overheating</h1>
-				<div class="thermometer"></div>
+				<h1>Isomorphic??</h1>
+				<h1>Universal??</h1>
 			</section>
-			<section data-background-image="/img/maillard.jpg">
-				<h1 class="shadow">Maillard</h1>
+			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
+				<h1>SSR + SPA</h1>
+				<h1>=</h1>
+				<h1>Isomorphic</h1>
 			</section>
+			<section data-background-gradient="linear-gradient(225deg, #7B4397, #DC2430)" data-background-color="#7B4397">
+				<h1>Node + Browser</h1>
+				<h1>=</h1>
+				<h1>Universal JS</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1 class="big">Next.js</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<blockquote>"Next.js is a minimalistic framework for server-rendered React applications."</blockquote>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Install</h1>
+				<code>
+$ yarn add next react react-dom
+				</code>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Configure</h1>
+				<pre>
+					<code class="hljs" data-trim>
+package.json
+
+"scripts": {
+  "dev": "next",
+  "build": "next build",
+  "start": "next start"
+}
+					</code>
+				</pre>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Create</h1>
+				<pre>
+					<code class="hljs" data-trim>
+pages/index.js
+
+export default
+  () => &lt;h1&gt;Don't panic&lt;/h1&gt;
+					</code>
+				</pre>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Test</h1>
+				<pre>
+					<code class="hljs" data-trim>
+$ yarn dev
+http://localhost:3000
+					</code>
+				</pre>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Deploy</h1>
+				<pre>
+					<code class="hljs" data-trim>
+yarn global add now
+now
+					</code>
+				</pre>
+			</section>
+			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
+				<h1>Just 5 steps!</h1>
+				<h2>4 commands
+					<br>6 lines of code</h2>
+			</section>
+			<section data-background-color="#000">
+				<h2 class="sw">
+					Long time ago in a
+					<i>universe</i> far,
+					<br> far away....
+				</h2>
+			</section>
+			<section data-background-color="#000">
+				<img src="img/fp.svg" style="width: 400px">
+			</section>
+			<section data-background-color="#000">
+				<img src="img/php.svg" style="width: 600px">
+			</section>
+			<section data-background-color="#000">
+				<img src="img/fz.svg" style="width: 400px">
+			</section>
+			<section data-background-color="#000">
+				<h1>JS</h1>
+				<pre>
+					<code class="hljs" data-trim>
+var msg = "Thanks for ..."
+function scroll() {
+  window.status = msg
+  msg = msg.substring[...]
+  setTimeout("scroll()",150)
+}
+					</code>
+				</pre>
+			</section>
+			<section data-background-color="#000">
+				<h1>CSS</h1>
+				<p class="fragment">...</p>
+				<p class="fragment">...</p>
+				<p class="fragment">
+					Tables layout
+				</p>
+			</section>
+			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
+				<h1>Not cool...</h1>
+				<h1 class="fragment">But easy</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1 class="big">Today</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<img src="img/js.jpg">
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1>New ways</h1>
+				<h1>and tools</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1>Express.js</h1>
+				<h2>for dynamic pages</h2>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1 class="big">~ 16</h1>
+				<h1>lines of code</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1>Apollo GraphQL</h1>
+				<h2>for data</h2>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1 class="big">± 30</h1>
+				<h1>lines of code</h1>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1>CSS-in-JS</h1>
+				<h2>default
+					<code>styled-jsx</code>
+				</h2>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1 class="big">± 10</h1>
+				<h1>lines of code</h1>
+				<h4>for styled-components</h4>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1>Test</h1>
+				<h2>with Storybook</h2>
+			</section>
+			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
+				<h1 class="big">~ 10</h1>
+				<h1>lines of code</h1>
+			</section>
+			<!-- <section data-background-image="/img/bg.jpg">
+				<div class="logo-wrapper">
+					<div class="stickers">
+						<img class="logo logo1" src="img/fp.svg">
+						<img class="logo logo2" src="img/php.svg">
+						<img class="logo logo3" src="img/fz.svg">
+						<img class="logo logo4" src="img/prototype.png">
+						<img class="logo logo5" src="img/jquery.png">
+						<img class="logo logo6" src="img/mootools.png">
+						<img class="logo logo7" src="img/angularjs.png">
+						<img class="logo logo8" src="img/backbone.png">
+						<img class="logo logo9" src="img/ember.png">
+						<img class="logo logo10" src="img/node.png">
+						<img class="logo logo11" src="img/npm.svg">
+						<img class="logo logo12" src="img/bower.svg">
+						<img class="logo logo13" src="img/grunt.svg">
+						<img class="logo logo14" src="img/gulp.png">
+						<img class="logo logo15" src="img/yeoman.png">
+						<img class="logo logo16" src="img/react.svg">
+						<img class="logo logo17" src="img/polymer.png">
+						<img class="logo logo18" src="img/webpack.png">
+						<img class="logo logo19" src="img/rollup.svg">
+					</div>
+				</div>
+			</section> -->
 			<section data-background-image="/img/me.jpg" style="text-align: right; padding-top: 200px">
 				<h2 class="shadow">Giacomo Zinetti</h2>
 				<h3 class="shadow">@gcmznt</h3>
 			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h1>How browser renders?</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="cycle">
-					<div class="main">
-						<h1 class="small">Render cycle</h1>
-					</div>
-					<h3 class="chevron js">
-						<span>JavaScript</span>
-					</h3>
-					<h3 class="chevron style">
-						<span>Style</span>
-					</h3>
-					<h3 class="chevron layout">
-						<span>Layout</span>
-					</h3>
-					<h3 class="chevron paint">
-						<span>Paint</span>
-					</h3>
-					<h3 class="chevron composite">
-						<span>Composite</span>
-					</h3>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="cycle">
-					<div class="main">
-						<h1 class="small">Our logic</h1>
-					</div>
-					<h3 class="chevron js">
-						<span>JavaScript</span>
-					</h3>
-					<h3 class="chevron style">
-						<span>Style</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Layout</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Paint</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Composite</span>
-					</h3>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="cycle">
-					<div class="main">
-						<h2>
-							<code>margin<br>padding</code>
-						</h2>
-						<p>&nbsp;</p>
-						<h1 class="small">Reflow</h1>
-					</div>
-					<h3 class="chevron">
-						<span>JavaScript</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Style</span>
-					</h3>
-					<h3 class="chevron layout">
-						<span>Layout</span>
-					</h3>
-					<h3 class="chevron paint">
-						<span>Paint</span>
-					</h3>
-					<h3 class="chevron composite">
-						<span>Composite</span>
-					</h3>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="cycle">
-					<div class="main">
-						<h2>
-							<code>color<br>background</code>
-						</h2>
-						<p>&nbsp;</p>
-						<h1 class="small">Repaint</h1>
-					</div>
-					<h3 class="chevron">
-						<span>JavaScript</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Style</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Layout</span>
-					</h3>
-					<h3 class="chevron paint">
-						<span>Paint</span>
-					</h3>
-					<h3 class="chevron composite">
-						<span>Composite</span>
-					</h3>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="cycle">
-					<div class="main">
-						<h2>
-							<code>transform<br>opacity</code>
-						</h2>
-						<p>&nbsp;</p>
-						<h1 class="small">Compose</h1>
-					</div>
-					<h3 class="chevron">
-						<span>JavaScript</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Style</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Layout</span>
-					</h3>
-					<h3 class="chevron">
-						<span>Paint</span>
-					</h3>
-					<h3 class="chevron composite">
-						<span>Composite</span>
-					</h3>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
-				<h1 class="big">CSS</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
-				<h1 class="small">Animate compositor-only properties</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="square slow">Left</div>
-				<div class="square fast">Translate</div>
-				<button class="button" id="work">Execute long JS task</button>
-				<button class="button" id="start">Start heavy JS loop</button>
-				<button class="button" id="stop">Stop heavy JS loop</button>
-				<p>
-					<a href="https://codepen.io/gcmznt/pen/xYXgzQ">
-						<img class="codepen" src="/img/codepen.svg" />
-					</a>
-				</p>
-				<script>
-					const workButton = document.getElementById('work');
-					const startButton = document.getElementById('start');
-					const stopButton = document.getElementById('stop');
-					let heavyLoopTimeout;
-
-					function longTask(el = 10000000) {
-						console.log(el);
-						new Array(el).fill(1).map((e, i) => e * i);
-					}
-
-					function heavyLoop() {
-						startButton.style.display = 'none';
-						stopButton.style.display = '';
-						longTask(1000000);
-						heavyLoopTimeout = setTimeout(heavyLoop, 16);
-					}
-
-					function heavyLoopStop() {
-						startButton.style.display = '';
-						stopButton.style.display = 'none';
-						clearTimeout(heavyLoopTimeout)
-					}
-
-					workButton.addEventListener('click', () => longTask());
-					startButton.addEventListener('click', () => heavyLoop());
-					stopButton.addEventListener('click', () => heavyLoopStop());
-
-					stopButton.style.display = 'none';
-				</script>
-			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
-				<h1>Create layers</h1>
-				<h1>
-					<code>will-change</code>
-				</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h2>❌</h2>
-				<h3 style="text-align: left">
-					<code>
-* {<br>
-&nbsp;&nbsp;will-change: transform;<br>
-}
-					</code>
-				</h3>
-			</section>
-			<section data-background-gradient="linear-gradient(to right, #000854, #004E92)" data-background-color="#000854">
-				<h1>Disable hover on scroll</h1>
-				<aside class="notes">
-					Scroll is an animation
-				</aside>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1 class="big">JS</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1>Avoid forced synchronous layout</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h2>❌</h2>
-				<h4 style="text-align: left">
-					<code>
-elements.forEach(el => {<br>
-&nbsp;&nbsp;el.querySelector('img').style.width<br>
-&nbsp;&nbsp;&nbsp;&nbsp;= `${el.offsetWidth}px`;<br>
-})
-					</code>
-				</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h2>🤓</h2>
-				<h4 style="text-align: left">
-					<code>
-elements.forEach((el, i) => {<br>
-&nbsp;&nbsp;ws[i] = el.offsetWidth;<br>
-})<br>
-elements.forEach((el, i) => {<br>
-&nbsp;&nbsp;el.querySelector('img').style.width<br>
-&nbsp;&nbsp;&nbsp;&nbsp;= `${ws[i]}px`;<br>
-})
-					</code>
-				</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1 class="big">rAF</h1>
-				<h2>requestAnimationFrame()</h2>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1 class="big">rIC</h1>
-				<h2>requestIdleCallback()</h2>
-			</section>
-			<aside class="notes">
-				Optimistic ui
-			</aside>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1>Split big tasks</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1>Web workers</h1>
-			</section>
-			<!-- <section data-background-gradient="linear-gradient(135deg, #E65C00, #8E0E00)" data-background-color="#8E0E00">
-				<h1>Passive listener on scroll</h1>
-			</section> -->
-			<section data-background-image="/img/rail.jpg">
-				<h1 class="shadow fragment">
-					TARGET
-					<br>
-					<big>RAIL</big>
-				</h1>
-			</section>
-			<section data-background-image="/img/rail.jpg">
-				<h1 class="shadow small">
-					<code>
-Response&nbsp;<100ms<br>
-Animation&nbsp;<16ms<br>
-Idle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<50ms<br>
-Load&nbsp;&nbsp;&nbsp;&nbsp;<1000ms<br>
-				</code>
-				</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1 class="big">FLIP</h1>
-				<h3>by @aerotwist</h3>
-			</section>
-			<section>
-				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-					<h1>First</h1>
-					<h4 style="text-align: left">
-						<code>
-	const first =<br>
-	&nbsp;&nbsp;el.getBoundingClientRect();
-					</code>
-					</h4>
-				</section>
-				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-					<h1>Last</h1>
-					<h4 style="text-align: left">
-						<code>
-	el.classList.toggle('end');<br>
-	const last =<br>
-	&nbsp;&nbsp;el.getBoundingClientRect();
-					</code>
-					</h4>
-				</section>
-				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-					<h1>Invert</h1>
-					<h4 style="text-align: left">
-						<code>
-	const invert =<br>
-	&nbsp;&nbsp;first.height / last.height;
-					</code>
-					</h4>
-				</section>
-				<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-					<h1>Play</h1>
-					<h4 style="text-align: left">
-						<code>
-	el.animate([<br>
-	&nbsp;&nbsp;{ transform: `scale(${invert}px)` },<br>
-	&nbsp;&nbsp;{ transform: 'scale(0)' }<br>
-	], 300);
-					</code>
-					</h4>
-					<aside class="notes">
-						Content can get distorted
-					</aside>
-				</section>
-			</section>
-			<section data-background-gradient="linear-gradient(55deg, #237A57, #093028)" data-background-color="#093028">
-				<h1 class="small">
-					<code>First&nbsp;
-					<br>Last&nbsp;&nbsp;
-					<br>Invert
-					<br>Play&nbsp;&nbsp;&nbsp;</code>
-				</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<div class="flip-wrapper">
-					<div class="flip-demo">
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-						<div>
-							<div class="flip-el" tabindex="0"></div>
-						</div>
-					</div>
-				</div>
-				<p>
-					<a href="https://codepen.io/gcmznt/pen/BrLrbZ">
-						<img class="codepen" src="/img/codepen.svg" />
-					</a>
-				</p>
-				<script>
-					Array.from(document.querySelectorAll('.flip-el')).forEach(el => {
-						el.addEventListener('focus', e => flip(e.target, 'flipped'))
-						el.addEventListener('blur', e => flip(e.target, 'flipped'))
-					});
-
-					function flip(el, className = 'flipped') {
-						var first = el.getBoundingClientRect();
-
-						el.classList.toggle(className);
-						var last = el.getBoundingClientRect();
-
-						var invertY = first.top - last.top;
-						var invertX = first.left - last.left;
-						var scaleX = first.width / last.width;
-						var scaleY = first.height / last.height;
-
-						requestAnimationFrame(function () {
-							el.animate([
-								{ transform: `translate(${invertX}px, ${invertY}px) scale(${scaleX}, ${scaleY})` },
-								{ transform: `translate(0, 0) scale(1, 1)` }
-							], 300);
-						});
-					};
-				</script>
-			</section>
-			<aside class="notes">
-				Animate not transitionable properties
-			</aside>
-			<!-- update codepen -->
-			<section data-background-gradient="linear-gradient(10deg, #1C4587, #DC2430)" data-background-color="#1C4587">
-				<h1>
-					Content
-					<br> VS
-					<br> Animations
-				</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(10deg, #1C4587, #DC2430)" data-background-color="#1C4587">
-				<h1 class="big">Users!</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h1 class="small">The best animation is the invisible one</h1>
-				<h3 class="fragment" style="margin-top: 2em">Thank you 🙏</h3>
-				<aside class="notes">
-					Animations like referees
-				</aside>
+			<section data-background-color="#000">
+				<h1 class="cover">DON'T
+					<br>PANIC</h1>
 			</section>
 			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
 				<h1>Links</h1>
 				<ul>
 					<li>
-						<a href="https://cssday2018.slides.giko.it/">This slides</a>
+						<a href="https://universaljsday2018.slides.giko.it/">This slides</a>
 					</li>
 					<li>
-						<a href="https://codepen.io/collection/DxqVxK/">Codepen examples</a>
+						<a href="https://github.com/gcmznt/universal-skeleton">Demo project</a>
 					</li>
 					<li>
-						<a href="https://joind.in/talk/5430a">Feedbacks are welcome!</a>
-					</li>
-					<li>
-						<a href="https://developers.google.com/web/fundamentals/performance">Web Fundamentals: Performance</a>
-					</li>
-					<li>
-						<a href="https://csstriggers.com/">CSS Triggers</a>
-					</li>
-					<li>
-						<a href="https://aerotwist.com/blog/flip-your-animations/">FLIP by @aerotwist</a>
+						<a href="https://joind.in/talk/9b989">Feedbacks are welcome!</a>
 					</li>
 				</ul>
 			</section>
-		</div>
-		<div class="scene">
-			<div class="sky"></div>
-			<div class="stars"></div>
-			<div class="sun"></div>
-			<div class="moon"></div>
-			<div class="cloud"></div>
-			<div class="cloud cloud--1"></div>
-			<div class="cloud cloud--2"></div>
-			<div class="ship">
-				<img src="/img/ship.svg" class="ship-img" />
-			</div>
-			<div class="dolphin">
-				<img src="/img/dolphin.svg" class="dolphin-img" />
-			</div>
-			<div class="sea sea--2"></div>
-			<div class="sea"></div>
 		</div>
 	</div>
 

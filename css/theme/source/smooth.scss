@@ -16,7 +16,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #111;
+$backgroundColor: #000;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -46,24 +46,66 @@ section.has-light-background {
 
 // Theme template ------------------------------
 @import "../template/theme";
-@import '../template/scene';
-@import '../template/battery';
-@import '../template/squares';
-@import '../template/flip';
-@import '../template/cycle';
-@import '../template/thermometer';
+// @import '../template/scene';
+// @import '../template/battery';
+// @import '../template/squares';
+// @import '../template/flip';
+// @import '../template/cycle';
+// @import '../template/thermometer';
 // ---------------------------------------------
 
 .reveal {
 	h1.main {
-		color: #0dd;
-		font-size: 120px;
-		// text-shadow: 0 0 28px #0dd !important;
-		animation: neon infinite ease 1s alternate;
+		color: #BB3335;
+		font-size: 100px;
+		-webkit-text-stroke: 2px #FFFA5C;
+	}
+
+	h1.cover {
+		font-family: Arial Black;
+		color: #BB3335;
+		font-size: 250px;
+		-webkit-text-stroke: 5px #FFFA5C;
+		line-height: 0.8;
+    letter-spacing: -14.5px;
+	}
+
+	h4.main {
+		color: #FFFA5C;
+	}
+
+	.thumb-wrapper {
+		position: relative;
+		// background: #FFFA5C;
+		filter: invert(1);
+
+	// 	img {
+	// 		background-color: white;
+	// 		mix-blend-mode: lighten;
+	// 	}
+
+		// &::after {
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	background: yellow;
+		// }
+	}
+
+	blockquote {
+		background-color: transparent;
+		border: 0;
+		font-size: 60px;
+		width: 90%;
+		font-weight: bold;
 	}
 
 	.has-scene & h1 {
-		text-shadow: 0 0 200px #021b79;
+		text-shadow: 0 0 200px #FFFA5C;
 	}
 
 	h1.shadow,
@@ -87,16 +129,63 @@ section.has-light-background {
 		border: 0;
 		box-shadow: none;
 	}
+
+	pre {
+		box-shadow: none;
+	}
+
+	code {
+		font-size: 50px;
+		font-weight: bold;
+		line-height: 1.2;
+		background-color: transparent;
+	}
+
+	.sw {
+		color: #72ECE9;
+		font-weight: normal;
+		text-align: left;
+	}
+
+	.logo-wrapper {
+		height: 600px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		perspective: 800px;
+	}
+
+	.stickers {
+		height: 80%;
+		width: 85%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: rotateX(5deg);
+		// mix-blend-mode: overlay;
+	}
+
+	.logo {
+		position: absolute;
+		width: 100%;
+		max-width: 100px;
+		max-height: 100px;
+	}
+
+	.logo1 { transform: translate(20vw, 20vh) scale(1) }
+	.logo2 { transform: translate(10vw, -17vh) scale(1.8) }
+	.logo3 { transform: translate(-15vw, -10vh) scale(1) }
 }
 
 @keyframes neon {
-	from { text-shadow: 0 0 10px #0dd; }
-	80% { text-shadow: 0 0 28px #0dd; }
-	84% { text-shadow: 0 0 45px #0dd; }
-	88% { text-shadow: 0 0 22px #0dd; }
-	92% { text-shadow: 0 0 38px #0dd; }
-	96% { text-shadow: 0 0 20px #0dd; }
-	to { text-shadow: 0 0 28px #0dd; }
+	from { text-shadow: 0 0 10px #FFFA5C; }
+	80% { text-shadow: 0 0 28px #FFFA5C; }
+	84% { text-shadow: 0 0 45px #FFFA5C; }
+	88% { text-shadow: 0 0 22px #FFFA5C; }
+	92% { text-shadow: 0 0 38px #FFFA5C; }
+	96% { text-shadow: 0 0 20px #FFFA5C; }
+	to { text-shadow: 0 0 28px #FFFA5C; }
 }
 
 .codepen {
