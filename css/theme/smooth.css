@@ -356,6 +356,10 @@ body {
 .reveal .logo3 {
   transform: translate(-15vw, -10vh) scale(1); }
 
+.reveal ol {
+  font-size: 60px;
+  font-weight: bold; }
+
 @keyframes neon {
   from {
     text-shadow: 0 0 10px #FFFA5C; }

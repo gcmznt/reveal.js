@@ -176,6 +176,11 @@ section.has-light-background {
 	.logo1 { transform: translate(20vw, 20vh) scale(1) }
 	.logo2 { transform: translate(10vw, -17vh) scale(1.8) }
 	.logo3 { transform: translate(-15vw, -10vh) scale(1) }
+
+	ol {
+		font-size: 60px;
+		font-weight: bold;
+	}
 }
 
 @keyframes neon {
