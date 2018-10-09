@@ -3,7 +3,7 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(../../lib/font/open-sans/open-sans.css);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -11,11 +11,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #111;
-  background-color: #111; }
+  background: #2980b9;
+  background-color: #2980b9; }
 
 .reveal {
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 42px;
   font-weight: normal;
   color: #fff; }
@@ -46,7 +46,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: normal;
@@ -689,14 +689,20 @@ body {
     transform: rotate(0deg); } }
 
 .reveal h1.main {
-  color: #005dad;
   font-size: 120px; }
 
-.reveal h4.main {
-  color: #005dad; }
+.reveal .avatar {
+  border-radius: 50%;
+  border: 3px solid white; }
 
-.has-scene .reveal h1 {
-  text-shadow: 0 0 200px #021b79; }
+.reveal .profile {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center; }
+
+.reveal ul.simple {
+  list-style-type: none; }
 
 .reveal h1.shadow,
 .reveal h2.shadow,
