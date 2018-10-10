@@ -84,6 +84,11 @@ section.has-light-background {
 
 	ul.simple {
 		list-style-type: none;
+
+		a {
+			color: currentColor;
+			text-decoration: underline;
+		}
 	}
 
 	h1.shadow,

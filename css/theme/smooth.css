@@ -703,6 +703,9 @@ body {
 
 .reveal ul.simple {
   list-style-type: none; }
+  .reveal ul.simple a {
+    color: currentColor;
+    text-decoration: underline; }
 
 .reveal h1.shadow,
 .reveal h2.shadow,
