@@ -11,8 +11,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #111;
-  background-color: #111; }
+  background: #fff;
+  background-color: #fff; }
 
 .reveal {
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -689,9 +689,9 @@ body {
     transform: rotate(0deg); } }
 
 .reveal h1.main {
-  color: #0dd;
-  font-size: 120px;
-  animation: neon infinite ease 1s alternate; }
+  color: #850000;
+  font-size: 110px;
+  line-height: 100px; }
 
 .has-scene .reveal h1 {
   text-shadow: 0 0 200px #021b79; }

@@ -16,7 +16,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #111;
+$backgroundColor: #fff;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -56,10 +56,11 @@ section.has-light-background {
 
 .reveal {
 	h1.main {
-		color: #0dd;
-		font-size: 120px;
-		// text-shadow: 0 0 28px #0dd !important;
-		animation: neon infinite ease 1s alternate;
+		color: #850000;
+		font-size: 110px;
+		line-height: 100px;
+		// text-shadow: 0 0 28px rgba(133, 0, 0, .5) !important;
+		// animation: neon infinite ease 1s alternate;
 	}
 
 	.has-scene & h1 {
