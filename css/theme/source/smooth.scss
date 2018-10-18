@@ -368,9 +368,29 @@ section.has-light-background {
 			background-position: center 30%;
 			background-size: cover;
 		}
-
 	}
 
+	.reverse-wrapper {
+		animation: resize ease-in-out 10s infinite alternate;
+	}
+
+	.wrap {
+		--col: rgb(142, 68, 173);
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 0 auto;
+		height: 140px;
+		overflow: hidden;
+
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+
+		.item {
+			flex: 1 0 30px;
+			height: 40px;
+		}
+	}
 
 	.card-demo-wrapper {
 		display: flex;

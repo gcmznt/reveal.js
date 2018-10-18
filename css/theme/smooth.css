@@ -926,6 +926,20 @@ body {
       background-color: #000;
       background-position: center 30%;
       background-size: cover; }
+  .reveal .reverse-wrapper {
+    animation: resize ease-in-out 10s infinite alternate; }
+  .reveal .wrap {
+    --col: #8e44ad;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    height: 140px;
+    overflow: hidden; }
+    .reveal .wrap.reverse {
+      flex-direction: row-reverse; }
+    .reveal .wrap .item {
+      flex: 1 0 30px;
+      height: 40px; }
   .reveal .card-demo-wrapper {
     display: flex;
     align-items: center;
