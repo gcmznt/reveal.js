@@ -693,6 +693,9 @@ body {
   font-size: 110px;
   line-height: 100px; }
 
+.reveal h4.main {
+  color: #850000; }
+
 .has-scene .reveal h1 {
   text-shadow: 0 0 200px #021b79; }
 
