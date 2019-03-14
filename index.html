@@ -1,485 +1,621 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The end of media queries?</title>
 
-	<title>ʇuǝɯdolǝʌǝp ǝʌısuodsǝɹ ǝsɹǝʌǝɹ</title>
+    <meta property="og:url" content="https://cssday2019.slides.giko.it" />
+    <meta property="og:site_name" content="Slides @giko.it" />
+    <meta property="og:title" content="The end of media queries?" />
+    <meta
+      property="og:description"
+      content="My slides for CSSDay 2019 in Faenza (Italy)"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:author" content="https://cv.giko.it" />
+    <meta
+      property="og:image"
+      content="https://cssday2019.slides.giko.it/img/cover.png"
+    />
 
-	<meta property="og:url" content="https://webappconf2018.slides.giko.it" />
-	<meta property="og:site_name" content="Slides @giko.it" />
-	<meta property="og:title" content="ʇuǝɯdolǝʌǝp ǝʌısuodsǝɹ ǝsɹǝʌǝɹ" />
-	<meta property="og:description" content="My slides for WebAppDay 2018 in Torino (Italy)" />
-	<meta property="og:type" content="website" />
-	<meta property="og:author" content="https://cv.giko.it" />
-	<meta property="og:image" content="https://webappconf2018.slides.giko.it/img/cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="giko.it" />
+    <meta name="twitter:creator" content="@gcmznt" />
+    <meta name="twitter:title" content="The end of media queries?" />
+    <meta
+      name="twitter:description"
+      content="My slides for CSSDay 2019 in Faenza (Italy)"
+    />
+    <meta
+      name="twitter:image:src"
+      content="https://cssday2019.slides.giko.it/img/cover.png"
+    />
 
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="giko.it">
-	<meta name="twitter:creator" content="@gcmznt">
-	<meta name="twitter:title" content="ʇuǝɯdolǝʌǝp ǝʌısuodsǝɹ ǝsɹǝʌǝɹ">
-	<meta name="twitter:description" content="My slides for WebAppDay 2018 in Torino (Italy)">
-	<meta name="twitter:image:src" content="https://webappconf2018.slides.giko.it/img/cover.png">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/smooth.css" />
 
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme|Montserrat"
+      rel="stylesheet"
+    />
 
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/smooth.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
-	<link href="https://fonts.googleapis.com/css?family=Acme|Montserrat" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-28055358-5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-28055358-5");
+    </script>
+  </head>
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement('link');
-		link.rel = 'stylesheet';
-		link.type = 'text/css';
-		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-28055358-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-28055358-5');
-	</script>
-</head>
-
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h1 class="main">ʇuǝɯdolǝʌǝp ǝʌısuodsǝɹ ǝsɹǝʌǝɹ</h1>
-				<a href="https://2018.webappconf.it"><img src="./img/logo.png" style="width: 250px" /></a>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>History</h1>
-			</section>
-			<section data-background-image="/img/galileo.jpeg">
-				<h2>18 Ottobre 1989</h2>
-				<h1><a href="https://solarsystem.nasa.gov/missions/galileo/overview/">Galileo</a></h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>The beginning</h1>
-				<ul>
-					<li>960 * 600</li>
-					<li>Safe Area</li>
-					<li>Pixel perfect</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>Tools available</h1>
-				<ul>
-					<li><code>&lt;table&gt;</code></li>
-					<li><code>position: absolute</code></li>
-					<li><code>zoom: 1</code></li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>Everything else</h1>
-				<p>⚡️ Flash</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>2005: Mobile</h1>
-				<ul>
-					<li>domain .mobi and m. sites</li>
-					<li>2 different websites</li>
-					<li>from big to small</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>Tools available</h1>
-				<p>... almost the same</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>2008: Fluid</h1>
-				<ul>
-					<li>2002 Jim Kalbach: audi.com</li>
-					<li>2010 RWD by Ethan Marcotte</li>
-					<li>2013 Year of RWD by Mashable</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>Tools available</h1>
-				<ul>
-					<li>2009: media query [spec started in 2001]</li>
-					<li>grid systems [2011 Bootstrap]</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>2009: Mobile first</h1>
-				<p>“Reverse Responsive” Web Design</p>
-				<ul>
-					<li>from small to big</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>Tools available</h1>
-				<p>The same with a focus on the exclusive use of `min-width` media query</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>Today</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>Components</h1>
-				<ul>
-					<li>2011: Web Components</li>
-					<li>2013: Atomic Web Design</li>
-					<li>Pattern libraries</li>
-					<li>...</li>
-				</ul>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>Tools???</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>2014</h1>
-				<p>Container/Element query?</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>W3: Nope...</h1>
-				<p>Cyclic Dependencies</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>Polyfill</h1>
-				<p>Slow performance</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>&lt;iframe&gt;</h1>
-				<p>Dirty hack</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)" data-background-color="#0c2461">
-				<h1>Houdini</h1>
-				<p>Too early</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>So what?</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Responsive !=<br>media query</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Reflow handling</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Float</h1>
-				<p>Yes, is still available</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Flex</h1>
-				<p>Flexible Box Layout</p>
-				<h4>2009 -> 2012</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<img src="/img/code-flex.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper">
-					<div class="flex">
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<h2>Flex "Grid"</h2>
-				<img src="/img/code-flex-grid.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper">
-					<div class="flex flex--fixed">
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Grid</h1>
-				<p>Grid Layout</p>
-				<h4>2012 -> 2017</h4>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<img src="/img/code-grid.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper">
-					<div class="grid">
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-						<div class="item">lorem ipsum dolor sit amet</div>
-						<div class="item">lorem</div>
-					</div>
-				</div>
-				<!-- <p>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="main">The end of <span>media queries</span>?</h1>
+          <img src="./img/cssday-logo.svg" style="width: 350px" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <h1>What is CSS?</h1>
+        </section>
+        <section data-background="./img/toolbox.jpg"></section>
+        <section data-background="./img/drill.jpg"></section>
+        <section data-background="./img/junior.jpg">
+          <h1>Junior</h1>
+        </section>
+        <section data-background="./img/senior.jpg">
+          <h1>Senior</h1>
+        </section>
+        <section data-background="./img/master.jpg">
+          <h1>Master</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <h1>For RWD</h1>
+          <h1><code>@media</code></h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>But today...</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h2>We have</h2>
+          <h1>Components</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>Tools???</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>Element query?</h1>
+          <h3>W3: Nope... Cyclic Dependencies</h3>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>Polyfill</h1>
+          <h2>Slow performance</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1><code>&lt;iframe&gt;</code></h1>
+          <h2>Dirty hack</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>Houdini</h1>
+          <h2>Too early</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>So what?</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Responsive<br />!=<br />Media query</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Reflow handling</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Float</h1>
+          <h3>Yes, is still available and works</h3>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Flex</h1>
+          <h2>Flexible Box Layout</h2>
+          <h4>since 2012</h4>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <img src="/img/code-flex.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper">
+            <div class="flex">
+              <div class="item">lorem ipsum dolor</div>
+              <div class="item">lorem</div>
+              <div class="item">lorem ipsum dolor sit amet</div>
+              <div class="item">lorem ipsum</div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <h2>Flex "Grid"</h2>
+          <img src="/img/code-flex-grid.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper">
+            <div class="flex flex--fixed">
+              <div class="item">lorem ipsum dolor</div>
+              <div class="item">lorem</div>
+              <div class="item">lorem ipsum dolor sit amet</div>
+              <div class="item">lorem ipsum</div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Grid</h1>
+          <h2>Grid Layout</h2>
+          <h4>since 2017</h4>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <img src="/img/code-grid.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper">
+            <div class="grid">
+              <div class="item">lorem ipsum dolor</div>
+              <div class="item">lorem</div>
+              <div class="item">lorem ipsum dolor sit amet</div>
+              <div class="item">lorem ipsum</div>
+            </div>
+          </div>
+          <!-- <p>
 					<a href="https://codepen.io/gcmznt/pen/BrLrbZ">
 						<img class="codepen" src="/img/codepen.svg" />
 					</a>
 				</p> -->
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<h1>Dense fill</h1>
-				<img src="/img/code-dense.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper tall">
-					<div class="grid dense">
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item big"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item big"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item big"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h2>Grid -> Structure</h2>
-				<h2>Flex -> Content</h2>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Hide content</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<ul>
-					<li>Flex +</li>
-					<li>overflow hidden +</li>
-					<li>Min/Max Height Trick</li>
-				</ul>
-				<img src="/img/code-minmax.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper demo-thumbs">
-					<div class="thumbs thumbs--horizontal">
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-						<div class="thumbs__item item"></div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Nested / Reverted Flex</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper demo-nesting">
-					<div class="reverse-wrapper">
-						<div class="wrap outer">
-							<div class="item"></div>
-							<div class="wrap reverse">
-								<div class="item"></div>
-								<div class="wrap reverse">
-									<div class="wrap">
-										<div class="item"></div>
-										<div class="item"></div>
-									</div>
-									<div class="item"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Quantity query</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<img src="/img/code-qq.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="demo-wrapper">
-					<div class="qq">
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-					<div class="qq">
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-					<div class="qq">
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-					<div class="qq">
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-						<div class="item"></div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Ok... let's get seriuos</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Video player</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="video-player-demo-wrapper">
-					<div class="video-player-demo">
-						<div class="layout">
-							<div class="layout__main">
-								<div class="layout__content">
-									<div class="video">
-										<div class="video__wrapper">
-											<video class="video__media" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="layout__side">
-								<div class="layout__related">
-									<div class="tmbs">
-										<figure class="tmbs__item tmb" style="background-image: url('https://images.unsplash.com/photo-1486373317893-b5f241f5445e?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=b09e638c2d85dc8602792990184639aa');"></figure>
-										<figure class="tmbs__item tmb" style="background-image: url('https://images.unsplash.com/photo-1529461798179-5172eea7948e?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=ab048e52dae26617fc9733f89ebe2415');"></figure>
-										<figure class="tmbs__item tmb" style="background-image: url('https://images.unsplash.com/photo-1517878566452-d3f72eb7a6e4?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=d15e6443103bf84d3c614859f88848fd');"></figure>
-										<figure class="tmbs__item tmb" style="background-image: url('https://images.unsplash.com/photo-1538969574883-9945a981f11a?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=822555e90a70a5e08c8423f5a1a494f7');"></figure>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>Cards</h1>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<div class="card-demo-wrapper">
-					<div class="card-demo">
-						<div class="card"><img class="card__media" src="https://images.unsplash.com/photo-1492097827674-093f8c2a17c8?ixlib=rb-0.3.5&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ&amp;s=0f6c037ee24c8f27ef80dc5f9c74da60"
-							 alt="" />
-							<div class="card__content info">
-								<div class="info__text">
-									<h1>A new hope</h1>
-									<p>It is a period of civil war.
-										Rebel spaceships, striking
-										from a hidden base, have won
-										their first victory against
-										the evil Galactic Empire.</p>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <h1>Dense fill</h1>
+          <img src="/img/code-dense.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper tall">
+            <div class="grid dense">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item big"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item big"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item big"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h2>Grid -> Structure</h2>
+          <h2>Flex -> Content</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Hide content</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <ul>
+            <li>Flex +</li>
+            <li>overflow hidden +</li>
+            <li>Min/Max Height Trick</li>
+          </ul>
+          <img src="/img/code-minmax.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper demo-thumbs">
+            <div class="thumbs thumbs--horizontal">
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+              <div class="thumbs__item item"></div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Nested / Reverted Flex</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper demo-nesting">
+            <div class="reverse-wrapper">
+              <div class="wrap outer">
+                <div class="item"></div>
+                <div class="wrap reverse">
+                  <div class="item"></div>
+                  <div class="wrap reverse">
+                    <div class="wrap">
+                      <div class="item"></div>
+                      <div class="item"></div>
+                    </div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Quantity query</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <img src="/img/code-qq.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper">
+            <div class="qq">
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+            <div class="qq">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+            <div class="qq">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+            <div class="qq">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Ok... let's get seriuos</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Video player</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="video-player-demo-wrapper">
+            <div class="video-player-demo">
+              <div class="layout">
+                <div class="layout__main">
+                  <div class="layout__content">
+                    <div class="video">
+                      <div class="video__wrapper">
+												<video
+													controls
+													src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                          class="video__media"
+													poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+													width="620"
+												>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layout__side">
+                  <div class="layout__related">
+                    <div class="tmbs">
+                      <figure
+                        class="tmbs__item tmb"
+                        style="background-image: url('img/thumb1.jpeg');"
+                      ></figure>
+                      <figure
+                        class="tmbs__item tmb"
+                        style="background-image: url('img/thumb2.jpeg');"
+                      ></figure>
+                      <figure
+                        class="tmbs__item tmb"
+                        style="background-image: url('img/thumb3.jpeg');"
+                      ></figure>
+                      <figure
+                        class="tmbs__item tmb"
+                        style="background-image: url('img/thumb4.jpeg');"
+                      ></figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h1>Cards</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <div class="card-demo-wrapper">
+            <div class="card-demo">
+              <div class="card">
+                <img class="card__media" src="img/sw.jpeg" alt="" />
+                <div class="card__content info">
+                  <div class="info__text">
+                    <h1>A new hope</h1>
+                    <p>
+                      It is a period of civil war. Rebel spaceships, striking
+                      from a hidden base, have won their first victory against
+                      the evil Galactic Empire.
+                    </p>
 
-									<p>During the battle, Rebel
-										spies managed to steal secret
-										plans to the Empire's
-										ultimate weapon, the DEATH
-										STAR, an armored space
-										station with enough power to
-										destroy an entire planet.</p>
-								</div>
-								<div class="info__actions actions">
-									<div class="actions__button">
-										<svg width="24" height="24" viewBox="0 0 24 24">
-											<path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z"></path>
-										</svg>
-									</div>
-									<div class="actions__button">
-										<svg width="24" height="24" viewBox="0 0 24 24">
-											<path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
-										</svg>
-									</div>
-									<div class="actions__button">
-										<svg width="24" height="24" viewBox="0 0 24 24">
-											<path d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M13,17H11V15H13V17M13,13H11V7H13V13Z"></path>
-										</svg>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h1>And now...</h1>
-				<p>Have fun and discover new solutions!</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<img src="/img/css.gif" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #440000, #850000)" data-background-color="#850000">
-				<h2>No media query were harmed in the making of this demos</h2>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #006266, #009432)" data-background-color="#006266">
-				<h1>And please...</h1>
-				<p>Don't forget the media query `max-width`</p>
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<h2>This code smells</h2>
-				<img src="/img/code-smells.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<h2>You can write this</h2>
-				<img src="/img/code-sol1.png" alt="">
-			</section>
-			<section data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)" data-background-color="#2c3e50">
-				<h2>... or this</h2>
-				<img src="/img/code-sol2.png" alt="">
-			</section>
-			<section data-background-image="/img/me.jpg" style="text-align: right; padding-top: 200px">
-				<h2 class="shadow">Giacomo Zinetti</h2>
-				<h3 class="shadow">@gcmznt</h3>
-			</section>
-			<section data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)" data-background-color="#000">
-				<h1>Links</h1>
-				<ul>
-					<li>
-						<a href="https://webappconf2018.slides.giko.it/">This slides</a>
-					</li>
-					<li>
-						<a href="https://codepen.io/collection/noWqWr/">Codepen examples</a>
-					</li>
-					<li>
-						<a href="http://ishoudinireadyyet.com/">Is Houdini ready yet?</a>
-					</li>
-					<li>
-						<a href="https://experiencinginformation.com/2012/07/22/the-first-responsive-design-website-audi-circa-2002/">The
-							first responsive website</a>
-					</li>
-					<li>
-						<a href="http://quantityqueries.com/">Quantity Queries</a>
-					</li>
-				</ul>
-			</section>
+                    <p>
+                      During the battle, Rebel spies managed to steal secret
+                      plans to the Empire's ultimate weapon, the DEATH STAR, an
+                      armored space station with enough power to destroy an
+                      entire planet.
+                    </p>
+                  </div>
+                  <div class="info__actions actions">
+                    <div class="actions__button">
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="actions__button">
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="actions__button">
+                      <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                          d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M13,17H11V15H13V17M13,13H11V7H13V13Z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <h1>And now...</h1>
+          <p>Have fun and discover new solutions!</p>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <img src="/img/css.gif" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <h2>No media query and no JS were harmed in the making of this demos</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h3>And remember...</h3>
+          <h2>The web is born responsive</h2>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <h2>This code smells</h2>
+          <img src="/img/code-smells.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <h2>You can write this</h2>
+          <img src="/img/code-sol1.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
+          data-background-color="#2c3e50"
+        >
+          <h2>... or this</h2>
+          <img src="/img/code-sol2.png" alt="" />
+        </section>
+        <section
+          data-background-image="/img/me.jpg"
+          style="text-align: right; padding-top: 200px"
+        >
+          <h2 class="shadow">Giacomo Zinetti</h2>
+          <h3 class="shadow">@gcmznt</h3>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)"
+          data-background-color="#000"
+        >
+          <h1>Links</h1>
+          <ul>
+            <li>
+              <a href="https://cssday2019.slides.giko.it/">This slides</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/collection/noWqWr/"
+                >Codepen examples</a
+              >
+            </li>
+            <li>
+              <a href="http://ishoudinireadyyet.com/">Is Houdini ready yet?</a>
+            </li>
+            <li>
+              <a
+                href="https://experiencinginformation.com/2012/07/22/the-first-responsive-design-website-audi-circa-2002/"
+                >The first responsive website</a
+              >
+            </li>
+            <li>
+              <a href="http://quantityqueries.com/">Quantity Queries</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
 
-		</div>
-	</div>
-
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-			history: true,
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
-			]
-		});
-	</script>
-</body>
-
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
 </html>

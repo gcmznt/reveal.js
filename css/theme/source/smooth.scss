@@ -16,14 +16,14 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #fff;
+$backgroundColor: #111;
 
 $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: 'Montserrat', sans-serif;
-$headingFont: 'Acme', sans-serif;
+$mainFont: 'Open Sans', Helvetica, sans-serif;
+$headingFont: 'Open Sans', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
@@ -32,7 +32,7 @@ $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
+$heading1Size: 3em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
@@ -56,11 +56,15 @@ section.has-light-background {
 
 .reveal {
 	h1.main {
-		color: #850000;
-		font-size: 110px;
-		line-height: 100px;
-		// text-shadow: 0 0 28px rgba(133, 0, 0, .5) !important;
-		animation: rotate infinite ease-in-out 5s alternate;
+		color: #595959;
+		font-size: 120px;
+		line-height: 120px;
+		margin-bottom: 70px;
+	}
+
+	h1.main span {
+		color: #0dd;
+		animation: neon infinite ease 2s alternate;
 	}
 
 	.has-scene & h1 {
@@ -82,10 +86,6 @@ section.has-light-background {
 		font-size: 100px;
 	}
 
-	h1 a {
-		color: currentColor;
-	}
-
 	section img {
 		margin: 15px 0px;
 		background: transparent;
@@ -95,19 +95,14 @@ section.has-light-background {
 }
 
 @keyframes neon {
-	from { text-shadow: 0 0 10px #0dd; }
+	from { text-shadow: 0 0 0px #0dd; }
+	40% { text-shadow: 0 0 5px #0dd; }
 	80% { text-shadow: 0 0 28px #0dd; }
 	84% { text-shadow: 0 0 45px #0dd; }
 	88% { text-shadow: 0 0 22px #0dd; }
 	92% { text-shadow: 0 0 38px #0dd; }
 	96% { text-shadow: 0 0 20px #0dd; }
 	to { text-shadow: 0 0 28px #0dd; }
-}
-
-@keyframes rotate {
-	40% { transform: scale(1) }
-	60% { transform: scale(-1) }
-	100% { transform: scale(-1) }
 }
 
 .codepen {
