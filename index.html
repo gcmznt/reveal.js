@@ -85,17 +85,11 @@
         >
           <h1>What is CSS?</h1>
         </section>
-        <section data-background="./img/toolbox.jpg"></section>
-        <section data-background="./img/drill.jpg"></section>
-        <section data-background="./img/junior.jpg">
-          <h1>Junior</h1>
-        </section>
-        <section data-background="./img/senior.jpg">
-          <h1>Senior</h1>
-        </section>
-        <section data-background="./img/master.jpg">
-          <h1>Master</h1>
-        </section>
+        <section data-background="./img/toolbox2.jpg"></section>
+        <!-- <section data-background="./img/drill.jpg"></section> -->
+        <section data-background="./img/junior.jpg"></section>
+        <section data-background="./img/senior.jpg"></section>
+        <section data-background="./img/master.jpg"></section>
         <section
           data-background-gradient="linear-gradient(135deg, #440000, #850000)"
           data-background-color="#850000"
@@ -151,6 +145,17 @@
           <h2>Too early</h2>
         </section>
         <section
+          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
+          data-background-color="#0c2461"
+        >
+          <h1>CSS Cascade</h1>
+          <h2>You need the control of the page</h2>
+        </section>
+        <section
+          data-background="img/5picchi.jpg"
+          data-background-color="#0c2461"
+        ></section>
+        <section
           data-background-gradient="linear-gradient(135deg, #006266, #009432)"
           data-background-color="#006266"
         >
@@ -160,12 +165,7 @@
           data-background-gradient="linear-gradient(135deg, #006266, #009432)"
           data-background-color="#006266"
         >
-          <h1>Responsive<br />!=<br />Media query</h1>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
+          <h2>Problem 1</h2>
           <h1>Reflow handling</h1>
         </section>
         <section
@@ -180,7 +180,6 @@
           data-background-color="#006266"
         >
           <h1>Flex</h1>
-          <h2>Flexible Box Layout</h2>
           <h4>since 2012</h4>
         </section>
         <section
@@ -227,7 +226,6 @@
           data-background-color="#006266"
         >
           <h1>Grid</h1>
-          <h2>Grid Layout</h2>
           <h4>since 2017</h4>
         </section>
         <section
@@ -249,10 +247,10 @@
             </div>
           </div>
           <!-- <p>
-					<a href="https://codepen.io/gcmznt/pen/BrLrbZ">
-						<img class="codepen" src="/img/codepen.svg" />
-					</a>
-				</p> -->
+          <a href="https://codepen.io/gcmznt/pen/BrLrbZ">
+            <img class="codepen" src="/img/codepen.svg" />
+          </a>
+        </p> -->
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
@@ -289,18 +287,39 @@
           data-background-gradient="linear-gradient(135deg, #006266, #009432)"
           data-background-color="#006266"
         >
-          <h2>Grid -> Structure</h2>
           <h2>Flex -> Content</h2>
+          <h2>Grid -> Structure</h2>
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #006266, #009432)"
           data-background-color="#006266"
         >
+          <h2>Problem 2</h2>
           <h1>Hide content</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
+        >
+          <h2>Dense grid and overflow hidden</h2>
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
           data-background-color="#2c3e50"
+        >
+          <div class="demo-wrapper tall">
+            <div class="grid dense dense2">
+              <div class="item large1"></div>
+              <div class="item large4"></div>
+              <div class="item large3"></div>
+              <div class="item large2"></div>
+              <div class="item large1"></div>
+            </div>
+          </div>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
         >
           <ul>
             <li>Flex +</li>
@@ -418,13 +437,13 @@
                   <div class="layout__content">
                     <div class="video">
                       <div class="video__wrapper">
-												<video
-													controls
-													src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                        <video
+                          controls
+                          src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
                           class="video__media"
-													poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-													width="620"
-												>
+                          poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+                          width="620"
+                        ></video>
                       </div>
                     </div>
                   </div>
@@ -514,23 +533,37 @@
           </div>
         </section>
         <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
+          data-background-gradient="linear-gradient(135deg, rgb(12, 36, 97), rgb(30, 55, 153))"
+          data-background-color="rgb(12, 36, 97)"
         >
-          <h1>And now...</h1>
-          <p>Have fun and discover new solutions!</p>
+          <h2>Flexbox compatibility</h2>
+          <img src="img/caniuse-flex.png" alt="" />
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, rgb(12, 36, 97), rgb(30, 55, 153))"
+          data-background-color="rgb(12, 36, 97)"
+        >
+          <h2>Grid compatibility</h2>
+          <img src="img/caniuse-grid.png" alt="" />
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #440000, #850000)"
           data-background-color="#850000"
         >
+          <h1>And now...</h1>
+        </section>
+        <section
+          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
+          data-background-color="#850000"
+        >
+          <p>Have fun and discover new solutions!</p>
           <img src="/img/css.gif" alt="" />
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #440000, #850000)"
           data-background-color="#850000"
         >
-          <h2>No media query and no JS were harmed in the making of this demos</h2>
+          <h2>No media query were harmed in the making of this demos</h2>
         </section>
         <section
           data-background-gradient="linear-gradient(135deg, #006266, #009432)"
@@ -540,25 +573,19 @@
           <h2>The web is born responsive</h2>
         </section>
         <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
         >
-          <h2>This code smells</h2>
-          <img src="/img/code-smells.png" alt="" />
+          <h2>Audi 2002</h2>
+          <img src="img/audi1.jpg" style="width: 400px" />
+          <img src="img/audi2.jpg" style="width: 500px" />
         </section>
         <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
+          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
+          data-background-color="#006266"
         >
-          <h2>You can write this</h2>
-          <img src="/img/code-sol1.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <h2>... or this</h2>
-          <img src="/img/code-sol2.png" alt="" />
+          <h2>🙏 Rate all the talks</h2>
+          <h3>bit.ly/cssday2019</h3>
         </section>
         <section
           data-background-image="/img/me.jpg"

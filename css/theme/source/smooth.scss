@@ -167,6 +167,24 @@ section.has-light-background {
 		grid-auto-flow: row dense;
 	}
 
+	.grid.dense2 {
+		height: 100px;
+		overflow: hidden;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+		.large2 {
+			grid-column: span 2;
+		}
+
+		.large3 {
+			grid-column: span 3;
+		}
+
+		.large4 {
+			grid-column: span 4;
+		}
+	}
+
 
 	/* Style */
 
