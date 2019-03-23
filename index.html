@@ -7,33 +7,36 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>The end of media queries?</title>
+    <title>1001 ways to write CSS today</title>
 
-    <meta property="og:url" content="https://cssday2019.slides.giko.it" />
+    <meta
+      property="og:url"
+      content="https://codemotion2019roma.slides.giko.it"
+    />
     <meta property="og:site_name" content="Slides @giko.it" />
-    <meta property="og:title" content="The end of media queries?" />
+    <meta property="og:title" content="1001 ways to write CSS today" />
     <meta
       property="og:description"
-      content="My slides for CSSDay 2019 in Faenza (Italy)"
+      content="My slides for Codemotion 2019 in Rome (Italy)"
     />
     <meta property="og:type" content="website" />
     <meta property="og:author" content="https://cv.giko.it" />
     <meta
       property="og:image"
-      content="https://cssday2019.slides.giko.it/img/cover.png"
+      content="https://codemotion2019roma.slides.giko.it/img/cover.png"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="giko.it" />
     <meta name="twitter:creator" content="@gcmznt" />
-    <meta name="twitter:title" content="The end of media queries?" />
+    <meta name="twitter:title" content="1001 ways to write CSS today" />
     <meta
       name="twitter:description"
-      content="My slides for CSSDay 2019 in Faenza (Italy)"
+      content="My slides for Codemotion 2019 in Rome (Italy)"
     />
     <meta
       name="twitter:image:src"
-      content="https://cssday2019.slides.giko.it/img/cover.png"
+      content="https://codemotion2019roma.slides.giko.it/img/cover.png"
     />
 
     <link rel="stylesheet" href="css/reveal.css" />
@@ -41,10 +44,6 @@
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Acme|Montserrat"
-      rel="stylesheet"
-    />
 
     <!-- Printing and PDF exports -->
     <script>
@@ -76,566 +75,246 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1 class="main">The end of <span>media queries</span>?</h1>
-          <img src="./img/cssday-logo.svg" style="width: 350px" />
+          <h1 class="title">1001 ways to write CSS today</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
-        >
-          <h1>What is CSS?</h1>
+        <section>
+          <h1>A lot of possibilities</h1>
         </section>
-        <section data-background="./img/toolbox2.jpg"></section>
-        <!-- <section data-background="./img/drill.jpg"></section> -->
-        <section data-background="./img/junior.jpg"></section>
-        <section data-background="./img/senior.jpg"></section>
-        <section data-background="./img/master.jpg"></section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
-        >
-          <h1>For RWD</h1>
-          <h1><code>@media</code></h1>
+        <section>
+          <h1>Today's goal</h1>
+          <h2>
+            To create a breadcrumb to follow during the decisional process
+          </h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>But today...</h1>
+        <section>
+          <h1>Starting a new project</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h2>We have</h2>
-          <h1>Components</h1>
+        <section>
+          <h1>1. Evaluate environment conditions</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>Tools???</h1>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Team expertise</h1>
+          <h2>Knowledge and seniority</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>Element query?</h1>
-          <h3>W3: Nope... Cyclic Dependencies</h3>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Project type</h1>
+          <h2>Website, app, white label</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>Polyfill</h1>
-          <h2>Slow performance</h2>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Project life span</h1>
+          <h2>Days, months or years</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1><code>&lt;iframe&gt;</code></h1>
-          <h2>Dirty hack</h2>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Design</h1>
+          <h2>Admin panel or heavy customization</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>Houdini</h1>
-          <h2>Too early</h2>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Browser compatibility</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>Others</h1>
-          <h2>ResizeObserver</h2>
-          <h2>IntersectionObserver</h2>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Build process</h1>
+          <h2>Do you have/want/need one?</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #0c2461, #1e3799)"
-          data-background-color="#0c2461"
-        >
-          <h1>CSS Cascade</h1>
-          <h2>You need the control of the page</h2>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>JS framework</h1>
+          <h2>React, Angular, Vue...</h2>
         </section>
-        <section
-          data-background="img/5picchi.jpg"
-          data-background-color="#0c2461"
-        ></section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>So what?</h1>
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h1>Micro frontends approach</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>Problem 1</h2>
-          <h1>Reflow handling</h1>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Float</h1>
-          <h3>Yes, is still available and works</h3>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Flex</h1>
-          <h4>since 2012</h4>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <img src="/img/code-flex.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper">
-            <div class="flex">
-              <div class="item">lorem ipsum dolor</div>
-              <div class="item">lorem</div>
-              <div class="item">lorem ipsum dolor sit amet</div>
-              <div class="item">lorem ipsum</div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <h2>Flex "Grid"</h2>
-          <img src="/img/code-flex-grid.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper">
-            <div class="flex flex--fixed">
-              <div class="item">lorem ipsum dolor</div>
-              <div class="item">lorem</div>
-              <div class="item">lorem ipsum dolor sit amet</div>
-              <div class="item">lorem ipsum</div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Grid</h1>
-          <h4>since 2017</h4>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <img src="/img/code-grid.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper">
-            <div class="grid">
-              <div class="item">lorem ipsum dolor</div>
-              <div class="item">lorem</div>
-              <div class="item">lorem ipsum dolor sit amet</div>
-              <div class="item">lorem ipsum</div>
-            </div>
-          </div>
-          <!-- <p>
-          <a href="https://codepen.io/gcmznt/pen/BrLrbZ">
-            <img class="codepen" src="/img/codepen.svg" />
-          </a>
-        </p> -->
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <h1>Dense fill</h1>
-          <img src="/img/code-dense.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper tall">
-            <div class="grid dense">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item big"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item big"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item big"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>Flex -> Content</h2>
-          <h2>Grid -> Structure</h2>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>Problem 2</h2>
-          <h1>Hide content</h1>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>Dense grid and overflow hidden</h2>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper tall">
-            <div class="grid dense dense2">
-              <div class="item large1"></div>
-              <div class="item large4"></div>
-              <div class="item large3"></div>
-              <div class="item large2"></div>
-              <div class="item large1"></div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
+        <section>
+          <p class="chapter">1. Evaluate environment conditions</p>
+          <h2>Recap</h2>
           <ul>
-            <li>Flex +</li>
-            <li>overflow hidden +</li>
-            <li>Min/Max Height Trick</li>
+            <li>Team expertise</li>
+            <li>Project type and life span</li>
+            <li>Design</li>
+            <li>Browser compatibility</li>
+            <li>Build process</li>
+            <li>JS framework or Micro frontends</li>
           </ul>
-          <img src="/img/code-minmax.png" alt="" />
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper demo-thumbs">
-            <div class="thumbs thumbs--horizontal">
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-              <div class="thumbs__item item"></div>
-            </div>
-          </div>
+        <section>
+          <h1>2. Define a tech stack</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Nested / Reverted Flex</h1>
+        <section>
+          <p class="chapter">2. Define a tech stack</p>
+          <h1>CSS framework</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper demo-nesting">
-            <div class="reverse-wrapper">
-              <div class="wrap outer">
-                <div class="item"></div>
-                <div class="wrap reverse">
-                  <div class="item"></div>
-                  <div class="wrap reverse">
-                    <div class="wrap">
-                      <div class="item"></div>
-                      <div class="item"></div>
-                    </div>
-                    <div class="item"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section>
+          <p class="chapter">CSS frameworks</p>
+          <ul>
+            <li>Why? What do you need? A button?</li>
+            <li>Who will maintain the styles?</li>
+            <li>Initial speed VS customization</li>
+            <li>Debt on long running projects</li>
+          </ul>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>Problem 3</h2>
-          <h1>Handle quantities</h1>
+        <section>
+          <p class="chapter">CSS frameworks: Which one?</p>
+          <ul>
+            <li>CSS only [Bulma, PureCSS]</li>
+            <li>Utility first [Tachyons, Tailwind]</li>
+            <li>JS support [Bootstrap, Foundation]</li>
+          </ul>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Quantity query</h1>
+        <section>
+          <p class="chapter">2. Define a tech stack</p>
+          <h1>Post processing</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <img src="/img/code-qq.png" alt="" />
+        <section>
+          <p class="chapter">Post processing</p>
+          <h1>CSS → CSS</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="demo-wrapper">
-            <div class="qq">
-              <div class="item"></div>
-              <div class="item"></div>
-            </div>
-            <div class="qq">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-            </div>
-            <div class="qq">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-            </div>
-            <div class="qq">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-            </div>
-          </div>
+        <section>
+          <p class="chapter">Post processing</p>
+          <h1>Use cases</h1>
+          <h2>Vendor prefixes, minification, transpilation, linting</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Ok... let's get seriuos</h1>
+        <section>
+          <p class="chapter">Post processing</p>
+          <h1>PostCSS</h1>
+          <h2>De facto standard</h2>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Cards</h1>
+        <section>
+          <p class="chapter">2. Define a tech stack</p>
+          <h1>Pre processing</h1>
         </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="card-demo-wrapper">
-            <div class="card-demo">
-              <div class="card">
-                <img class="card__media" src="img/sw.jpeg" alt="" />
-                <div class="card__content info">
-                  <div class="info__text">
-                    <h1>A new hope</h1>
-                    <p>
-                      It is a period of civil war. Rebel spaceships, striking
-                      from a hidden base, have won their first victory against
-                      the evil Galactic Empire.
-                    </p>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>!CSS → CSS</h1>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>CSS on steroids</h1>
+        </section>
+        <section data-background-image="/img/power.gif"></section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Great power</h1>
+          <h2>Variables, nesting, extends, mixins, operators</h2>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>But...</h1>
+          <h2>They depend on browser compatibility</h2>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Main choices</h1>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Sass / SCSS</h1>
+          <h2>Great diffusion, powerful, imperative</h2>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Less</h1>
+          <h2>Nice community, run in the browser, declarative</h2>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Sass VS Less</h1>
+        </section>
+        <section>
+          <img src="img/sass1.svg" alt="" style="height: 500px" />
+          <img src="img/less1.svg" alt="" style="height: 500px" />
+        </section>
+        <section>
+          <img src="img/sass1-res.svg" alt="" style="height: 300px" />
+          <img src="img/less1-res.svg" alt="" style="height: 300px" />
+        </section>
+        <section>
+          <img src="img/sass2.svg" alt="" style="height: 500px" />
+          <img src="img/less2.svg" alt="" style="height: 500px" />
+        </section>
+        <section>
+          <img src="img/sass2-res.svg" alt="" style="height: 300px" />
+          <img src="img/less2-res.svg" alt="" style="height: 300px" />
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>Stylus</h1>
+          <h2>Flexible syntax, some unique features, javascript</h2>
+        </section>
+        <section>
+          <p class="chapter">Pre processing</p>
+          <h1>PostCSS</h1>
+          <h2>Modular, heavily customizable</h2>
+        </section>
+        <section>
+          <p class="chapter">2. Define a tech stack</p>
+          <h1>CSS-in-JS</h1>
+        </section>
+        <section>
+          <p class="chapter">CSS-in-JS</p>
+          <h1>Framework agnostic or not?</h1>
+        </section>
+        <section>
+          <h1>3. Styleguides</h1>
+        </section>
+        <section>
+          <p class="chapter">3. Styleguides</p>
+          <h1>Naming convention</h1>
+        </section>
+        <section>
+          <p class="chapter">Naming convention</p>
+          <h1>Atomic</h1>
+        </section>
+        <section>
+          <img src="img/atomic.svg" alt="" />
+        </section>
+        <section>
+          <p class="chapter">Naming convention</p>
+          <h1>BEM</h1>
+        </section>
+        <section>
+          <img src="img/bem.svg" alt="" />
+        </section>
+        <section>
+          <p class="chapter">Naming convention</p>
+          <h1>Semantic</h1>
+          <h2>MaintainableCSS</h2>
+        </section>
+        <section>
+          <img src="img/maintainable.svg" alt="" />
+        </section>
+        <section>
+          <p class="chapter">3. Styleguides</p>
+          <h1>Linters</h1>
+        </section>
+        <section>
+          <p class="chapter">3. Styleguides</p>
+          <h1>The cascade!</h1>
+        </section>
+        <section data-background-image="/img/cascade.gif"></section>
+        <section>
+          <p class="chapter">The cascade</p>
+          <h1></h1>
+        </section>
+        <section>
+          <p class="chapter">3. Styleguides</p>
+          <h1></h1>
+        </section>
+        <section>
+          <p class="chapter">3. Styleguides</p>
+          <h1>The cascade!</h1>
+        </section>
+        <section>
+          <h1></h1>
+        </section>
 
-                    <p>
-                      During the battle, Rebel spies managed to steal secret
-                      plans to the Empire's ultimate weapon, the DEATH STAR, an
-                      armored space station with enough power to destroy an
-                      entire planet.
-                    </p>
-                  </div>
-                  <div class="info__actions actions">
-                    <div class="actions__button">
-                      <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A4,4 0 0,1 8,16A4,4 0 0,1 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4M12,6.5A1.5,1.5 0 0,1 13.5,8A1.5,1.5 0 0,1 12,9.5A1.5,1.5 0 0,1 10.5,8A1.5,1.5 0 0,1 12,6.5M12,14.5A1.5,1.5 0 0,0 10.5,16A1.5,1.5 0 0,0 12,17.5A1.5,1.5 0 0,0 13.5,16A1.5,1.5 0 0,0 12,14.5Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="actions__button">
-                      <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                          d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="actions__button">
-                      <svg width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                          d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M13,17H11V15H13V17M13,13H11V7H13V13Z"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h1>Video player</h1>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #2c3e50, #34495e)"
-          data-background-color="#2c3e50"
-        >
-          <div class="video-player-demo-wrapper">
-            <div class="video-player-demo">
-              <div class="layout">
-                <div class="layout__main">
-                  <div class="layout__content">
-                    <div class="video">
-                      <div class="video__wrapper">
-                        <video
-                          controls
-                          src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                          class="video__media"
-                          poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-                          width="620"
-                        ></video>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="layout__side">
-                  <div class="layout__related">
-                    <div class="tmbs">
-                      <figure
-                        class="tmbs__item tmb"
-                        style="background-image: url('img/thumb1.jpeg');"
-                      ></figure>
-                      <figure
-                        class="tmbs__item tmb"
-                        style="background-image: url('img/thumb2.jpeg');"
-                      ></figure>
-                      <figure
-                        class="tmbs__item tmb"
-                        style="background-image: url('img/thumb3.jpeg');"
-                      ></figure>
-                      <figure
-                        class="tmbs__item tmb"
-                        style="background-image: url('img/thumb4.jpeg');"
-                      ></figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, rgb(12, 36, 97), rgb(30, 55, 153))"
-          data-background-color="rgb(12, 36, 97)"
-        >
-          <h2>Flexbox compatibility</h2>
-          <img src="img/caniuse-flex.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, rgb(12, 36, 97), rgb(30, 55, 153))"
-          data-background-color="rgb(12, 36, 97)"
-        >
-          <h2>Grid compatibility</h2>
-          <img src="img/caniuse-grid.png" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
-        >
-          <h1>And now...</h1>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
-        >
-          <p>Have fun and discover new solutions!</p>
-          <img src="/img/css.gif" alt="" />
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #440000, #850000)"
-          data-background-color="#850000"
-        >
-          <h2>No media query were harmed in the making of this demos</h2>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h3>And remember...</h3>
-          <h2>The web is born responsive</h2>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>2002 Jim Kalbach</h2>
-          <img src="img/audi1.jpg" style="width: 400px" />
-          <img src="img/audi2.jpg" style="width: 500px" />
-        </section>
-        <section
-          data-background-image="/img/me.jpg"
-          style="text-align: right; padding-top: 200px"
-        >
-          <h2 class="shadow">Giacomo Zinetti</h2>
-          <h3 class="shadow">@gcmznt</h3>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(135deg, #006266, #009432)"
-          data-background-color="#006266"
-        >
-          <h2>🙏 Rate all the talks</h2>
-          <h3>bit.ly/cssday2019</h3>
-        </section>
-        <section
-          data-background-gradient="linear-gradient(to bottom, #4D4D4D, #000)"
-          data-background-color="#000"
-        >
-          <h1>Links</h1>
-          <ul>
-            <li>
-              <a href="https://cssday2019.slides.giko.it/">This slides</a>
-            </li>
-            <li>
-              <a href="https://codepen.io/collection/noWqWr/"
-                >Codepen examples</a
-              >
-            </li>
-            <li>
-              <a href="http://ishoudinireadyyet.com/">Is Houdini ready yet?</a>
-            </li>
-            <li>
-              <a
-                href="https://experiencinginformation.com/2012/07/22/the-first-responsive-design-website-audi-circa-2002/"
-                >The first responsive website</a
-              >
-            </li>
-            <li>
-              <a href="http://quantityqueries.com/">Quantity Queries</a>
-            </li>
-          </ul>
+        <section>
+          <h1>How to CSS in 2019?</h1>
         </section>
       </div>
     </div>
