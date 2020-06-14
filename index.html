@@ -7,36 +7,33 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>1001 ways to write CSS today</title>
+    <title>Components: illusione o realtà?</title>
 
-    <meta
-      property="og:url"
-      content="https://codemotion2019roma.slides.giko.it"
-    />
+    <meta property="og:url" content="https://cssday2020.slides.giko.it" />
     <meta property="og:site_name" content="Slides @giko.it" />
-    <meta property="og:title" content="1001 ways to write CSS today" />
+    <meta property="og:title" content="Components: illusione o realtà?" />
     <meta
       property="og:description"
-      content="My slides for Codemotion 2019 in Rome (Italy)"
+      content="My slides for CssDay 2020 online"
     />
     <meta property="og:type" content="website" />
     <meta property="og:author" content="https://cv.giko.it" />
     <meta
       property="og:image"
-      content="https://codemotion2019roma.slides.giko.it/img/cover.png"
+      content="https://cssday2020.slides.giko.it/img/cover.png"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="giko.it" />
     <meta name="twitter:creator" content="@gcmznt" />
-    <meta name="twitter:title" content="1001 ways to write CSS today" />
+    <meta name="twitter:title" content="Components: illusione o realtà?" />
     <meta
       name="twitter:description"
-      content="My slides for Codemotion 2019 in Rome (Italy)"
+      content="My slides for CssDay 2020 online"
     />
     <meta
       name="twitter:image:src"
-      content="https://codemotion2019roma.slides.giko.it/img/cover.png"
+      content="https://cssday2020.slides.giko.it/img/cover.png"
     />
 
     <link rel="stylesheet" href="css/reveal.css" />
@@ -78,20 +75,39 @@
           data-background-image="img/cover.png"
           data-background-size="contain"
         >
-          <!-- <h1 class="title">1001 ways to write CSS today</h1> -->
+          <!-- <h1 class="title">Components: illusione o realtà?</h1> -->
         </section>
         <section>
-          <h1>Today's goal</h1>
-          <h2>
-            To create a path to follow to support our decisional process
-          </h2>
+          <h1>Web components: the CSS part</h1>
         </section>
         <section>
-          <h1>Starting a new project</h1>
+          <h4 class="star-wars">A long time ago...</h4>
         </section>
-        <section>
-          <h1>1. Evaluate environment conditions</h1>
-        </section>
+        <section
+          data-background-image="img/zengarden.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
+        <section
+          data-background-image="img/zg1.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
+        <section
+          data-background-image="img/zg2.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
+        <section
+          data-background-image="img/zg3.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
+        <section
+          data-background-image="img/zg4.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
         <section>
           <p class="chapter">1. Evaluate environment conditions</p>
           <h1>Team expertise</h1>
@@ -228,42 +244,42 @@
         </section>
         <section>
           <h2>SCSS</h2>
-          <img src="img/sass1.svg" alt="" style="height: 350px" />
+          <img src="img/sass1.svg" alt="" style="height: 350px;" />
           <img
             class="fragment"
             src="img/sass1-res.svg"
             alt=""
-            style="height: 350px"
+            style="height: 350px;"
           />
         </section>
         <section>
           <h2>Less</h2>
-          <img src="img/less1.svg" alt="" style="height: 350px" />
+          <img src="img/less1.svg" alt="" style="height: 350px;" />
           <img
             class="fragment"
             src="img/less1-res.svg"
             alt=""
-            style="height: 350px"
+            style="height: 350px;"
           />
         </section>
         <section>
           <h2>SCSS</h2>
-          <img src="img/sass2.svg" alt="" style="height: 350px" />
+          <img src="img/sass2.svg" alt="" style="height: 350px;" />
           <img
             class="fragment"
             src="img/sass2-res.svg"
             alt=""
-            style="height: 350px"
+            style="height: 350px;"
           />
         </section>
         <section>
           <h2>Less</h2>
-          <img src="img/less2.svg" alt="" style="height: 350px" />
+          <img src="img/less2.svg" alt="" style="height: 350px;" />
           <img
             class="fragment"
             src="img/less2-res.svg"
             alt=""
-            style="height: 350px"
+            style="height: 350px;"
           />
         </section>
         <section>
@@ -385,7 +401,7 @@
             to handle well
           </h2>
         </section>
-        <section data-background-image="img/me.jpg" style="text-align: right">
+        <section data-background-image="img/me.jpg" style="text-align: right;">
           <h1>🙏</h1>
           <h2>Giacomo<br />Zinetti</h2>
           <h3>@gcmznt</h3>
@@ -409,6 +425,7 @@
     <script src="js/reveal.js"></script>
     <script>
       Reveal.initialize({
+        controls: false,
         history: true,
         dependencies: [
           { src: "plugin/markdown/marked.js" },
@@ -417,11 +434,11 @@
           {
             src: "plugin/highlight/highlight.js",
             async: true,
-            callback: function() {
+            callback: function () {
               hljs.initHighlightingOnLoad();
-            }
-          }
-        ]
+            },
+          },
+        ],
       });
     </script>
   </body>
